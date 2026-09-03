@@ -1,126 +1,651 @@
 <!DOCTYPE html>
+
 <html lang="en">
+
 <head>
+
+  <!-- Lets the browser know this webpage uses UTF-8 characters -->
   <meta charset="UTF-8">
+
+  <!-- Makes the website resize properly on phones and tablets -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Text that appears on the browser tab -->
   <title>Gerson | Web Development Portfolio</title>
+
+  <!-- Connects this HTML file to the CSS file -->
   <link rel="stylesheet" href="styles.css">
+
 </head>
+
+
 <body>
-  <div class="page-shell">
-    <header class="site-header">
-      <a class="logo" href="#home">GC<span>.</span></a>
-      <div class="course-tag">WEB DEV // PORTFOLIO</div>
-    </header>
 
-    <!-- These hidden radio buttons let the navigation switch sections using CSS only. -->
-    <input class="tab-control" type="radio" name="page-tab" id="tab-home" checked>
-    <input class="tab-control" type="radio" name="page-tab" id="tab-bio">
-    <input class="tab-control" type="radio" name="page-tab" id="tab-projects">
-    <input class="tab-control" type="radio" name="page-tab" id="tab-skills">
-    <input class="tab-control" type="radio" name="page-tab" id="tab-contact">
 
-    <main class="main-layout">
-      <nav class="menu" aria-label="Main navigation">
-        <p class="menu-label">SELECT</p>
-        <label for="tab-home" class="menu-item menu-home">HOME</label>
-        <label for="tab-bio" class="menu-item menu-bio">BIO</label>
-        <label for="tab-projects" class="menu-item menu-projects">PROJECTS</label>
-        <label for="tab-skills" class="menu-item menu-skills">SKILLS</label>
-        <label for="tab-contact" class="menu-item menu-contact">CONTACT</label>
-      </nav>
+  <!-- ========================================= -->
+  <!-- HEADER / NAVIGATION                       -->
+  <!-- ========================================= -->
 
-      <section class="content-stage">
-        <article class="panel panel-home">
-          <p class="eyebrow">HELLO, I'M GERSON.</p>
-          <h1>I BUILD<br><span>WEB EXPERIENCES.</span></h1>
-          <p class="intro">
-            A beginner-friendly portfolio for the projects I create in my college web development course.
-            This site will grow with me as I learn HTML, CSS, responsive design, and more.
-          </p>
-          <div class="hero-actions">
-            <label for="tab-projects" class="button primary-button">VIEW PROJECTS</label>
-            <label for="tab-bio" class="button secondary-button">ABOUT ME</label>
-          </div>
+  <header class="site-header">
 
-          <div class="status-card">
-            <span>STATUS</span>
-            <strong>LEARNING + BUILDING</strong>
-          </div>
-        </article>
+    <!-- Logo / website name -->
+    <a class="logo" href="#home">
 
-        <article class="panel panel-bio">
-          <p class="eyebrow">PERSONAL INFO</p>
-          <h2>ABOUT <span>ME</span></h2>
+      <!-- Red angled bracket -->
+      <span>&lt;</span>
+
+      GERSON
+
+      <!-- Red angled bracket -->
+      <span>&gt;</span>
+
+    </a>
+
+
+    <!-- Main navigation -->
+    <nav class="main-nav">
+
+      <!-- Each link jumps to a section on the page -->
+
+      <a href="#home">
+        HOME
+      </a>
+
+      <a href="#about">
+        ABOUT
+      </a>
+
+      <a href="#skills">
+        SKILLS
+      </a>
+
+      <a href="#projects">
+        PROJECTS
+      </a>
+
+      <a href="#contact">
+        CONTACT
+      </a>
+
+    </nav>
+
+  </header>
+
+
+
+  <!-- ========================================= -->
+  <!-- HERO / HOME SECTION                       -->
+  <!-- ========================================= -->
+
+  <main>
+
+
+    <section id="home" class="hero-section">
+
+
+      <!-- LEFT SIDE OF HERO -->
+
+      <div class="hero-content">
+
+        <!-- Small introduction -->
+        <p class="hero-small-text">
+
+          Hello, I'm
+
+        </p>
+
+
+        <!-- Main name -->
+        <h1 class="hero-name">
+
+          GERSON
+
+        </h1>
+
+
+        <!-- Last name displayed like a white sticker -->
+        <div class="name-sticker">
+
+          CRUZ-CARCAMO
+
+        </div>
+
+
+        <!-- Job / student title -->
+        <p class="hero-title">
+
+          Aspiring Developer
+
+        </p>
+
+
+        <!-- Short description -->
+        <p class="hero-description">
+
+          I build clean, responsive websites and enjoy
+          turning ideas into real projects through code.
+
+        </p>
+
+
+        <!-- Buttons -->
+        <div class="hero-buttons">
+
+          <!-- Goes to projects -->
+          <a href="#projects" class="button red-button">
+
+            VIEW PROJECTS
+
+          </a>
+
+
+          <!-- Goes to contact -->
+          <a href="#contact" class="button outline-button">
+
+            CONTACT ME
+
+          </a>
+
+        </div>
+
+      </div>
+
+
+
+      <!-- RIGHT SIDE OF HERO -->
+
+      <div class="hero-visual">
+
+
+        <!-- Large background shape -->
+        <div class="visual-background"></div>
+
+
+        <!-- Decorative red silhouette -->
+        <div class="character character-one"></div>
+
+        <!-- Decorative red silhouette -->
+        <div class="character character-two"></div>
+
+        <!-- Decorative red silhouette -->
+        <div class="character character-three"></div>
+
+
+        <!-- Decorative red lines -->
+        <div class="red-line line-one"></div>
+
+        <div class="red-line line-two"></div>
+
+        <div class="red-line line-three"></div>
+
+
+        <!-- Small decorative sign -->
+        <div class="visual-sign">
+
+          BUILD<br>
+          THE<br>
+          GAME
+
+        </div>
+
+
+      </div>
+
+
+    </section>
+
+
+
+    <!-- ========================================= -->
+    <!-- ABOUT SECTION                             -->
+    <!-- ========================================= -->
+
+    <section id="about" class="page-section about-section">
+
+
+      <!-- Section title -->
+      <h2 class="section-title">
+
+        ABOUT
+
+        <span>
+          ME
+        </span>
+
+      </h2>
+
+
+
+      <div class="about-layout">
+
+
+        <!-- About text -->
+        <div class="about-text">
+
           <p>
-            I'm Gerson, a Computer Science student building my web development skills one project at a time.
-            I like clean interfaces, bold visuals, and websites that feel fun to use instead of static.
+
+            I'm a Computer Science student who enjoys
+            web development, programming, and building
+            projects that let me learn new skills.
+
           </p>
+
+
           <p>
-            This portfolio is where I'll document class projects, experiments, and the progress I make throughout the course.
+
+            This portfolio will grow throughout my
+            web development course as I complete new
+            assignments and create new projects.
+
           </p>
-          <div class="info-grid">
-            <div><small>MAJOR</small><strong>Computer Science</strong></div>
-            <div><small>FOCUS</small><strong>Web Development</strong></div>
-            <div><small>LEVEL</small><strong>Beginner / Growing</strong></div>
-            <div><small>STYLE</small><strong>Bold + Interactive</strong></div>
-          </div>
-        </article>
 
-        <article class="panel panel-projects">
-          <p class="eyebrow">MISSION LOG</p>
-          <h2>MY <span>PROJECTS</span></h2>
-          <div class="project-grid">
-            <a class="project-card" href="#" aria-label="Project one placeholder">
-              <span class="project-number">01</span>
-              <h3>PROJECT ONE</h3>
-              <p>Your first class project can go here.</p>
-              <strong>COMING SOON →</strong>
+
+          <p>
+
+            I enjoy bold designs, interactive websites,
+            and learning how small pieces of code can
+            come together to create something useful.
+
+          </p>
+
+        </div>
+
+
+
+        <!-- Decorative graphic -->
+        <div class="about-graphic">
+
+          <!-- Main red circle -->
+          <div class="red-circle"></div>
+
+          <!-- Fake black silhouette -->
+          <div class="about-character"></div>
+
+          <!-- Decorative star -->
+          <div class="star">
+
+            ★
+
+          </div>
+
+        </div>
+
+
+      </div>
+
+
+    </section>
+
+
+
+    <!-- ========================================= -->
+    <!-- SKILLS SECTION                            -->
+    <!-- ========================================= -->
+
+    <section id="skills" class="page-section skills-section">
+
+
+      <!-- Section title -->
+      <h2 class="section-title">
+
+        <span>
+          S
+        </span>
+
+        KILLS
+
+      </h2>
+
+
+      <!-- Container holding skill cards -->
+      <div class="skills-grid">
+
+
+        <!-- HTML -->
+        <div class="skill-card">
+
+          <div class="skill-icon">
+
+            HTML
+
+          </div>
+
+          <h3>
+
+            HTML
+
+          </h3>
+
+          <p>
+
+            Building the structure of webpages.
+
+          </p>
+
+        </div>
+
+
+
+        <!-- CSS -->
+        <div class="skill-card">
+
+          <div class="skill-icon">
+
+            CSS
+
+          </div>
+
+          <h3>
+
+            CSS
+
+          </h3>
+
+          <p>
+
+            Styling layouts and responsive designs.
+
+          </p>
+
+        </div>
+
+
+
+        <!-- Java -->
+        <div class="skill-card">
+
+          <div class="skill-icon">
+
+            JAVA
+
+          </div>
+
+          <h3>
+
+            Java
+
+          </h3>
+
+          <p>
+
+            Object-oriented programming and problem solving.
+
+          </p>
+
+        </div>
+
+
+
+        <!-- Python -->
+        <div class="skill-card">
+
+          <div class="skill-icon">
+
+            PY
+
+          </div>
+
+          <h3>
+
+            Python
+
+          </h3>
+
+          <p>
+
+            Programming, tools, and personal projects.
+
+          </p>
+
+        </div>
+
+
+      </div>
+
+
+    </section>
+
+
+
+    <!-- ========================================= -->
+    <!-- PROJECTS SECTION                          -->
+    <!-- ========================================= -->
+
+    <section id="projects" class="page-section projects-section">
+
+
+      <!-- Section heading -->
+      <div class="projects-heading">
+
+        <h2 class="section-title">
+
+          PROJECTS
+
+        </h2>
+
+
+        <!-- Decorative button -->
+        <a href="#projects" class="small-button">
+
+          VIEW ALL PROJECTS
+
+        </a>
+
+      </div>
+
+
+
+      <!-- Project cards -->
+      <div class="projects-grid">
+
+
+        <!-- PROJECT 1 -->
+
+        <article class="project-card">
+
+          <div class="project-image">
+
+            PROJECT 01
+
+          </div>
+
+          <div class="project-info">
+
+            <h3>
+
+              Project One
+
+            </h3>
+
+            <p>
+
+              Your first web development class project
+              will be displayed here.
+
+            </p>
+
+            <a href="#">
+
+              VIEW PROJECT →
+
             </a>
-            <a class="project-card" href="#" aria-label="Project two placeholder">
-              <span class="project-number">02</span>
-              <h3>PROJECT TWO</h3>
-              <p>Add a screenshot, short description, and link later.</p>
-              <strong>COMING SOON →</strong>
+
+          </div>
+
+        </article>
+
+
+
+        <!-- PROJECT 2 -->
+
+        <article class="project-card">
+
+          <div class="project-image">
+
+            PROJECT 02
+
+          </div>
+
+          <div class="project-info">
+
+            <h3>
+
+              Project Two
+
+            </h3>
+
+            <p>
+
+              Add your second class assignment here
+              when it is completed.
+
+            </p>
+
+            <a href="#">
+
+              VIEW PROJECT →
+
             </a>
-            <a class="project-card" href="#" aria-label="Project three placeholder">
-              <span class="project-number">03</span>
-              <h3>PROJECT THREE</h3>
-              <p>Use this card for another web development assignment.</p>
-              <strong>COMING SOON →</strong>
+
+          </div>
+
+        </article>
+
+
+
+        <!-- PROJECT 3 -->
+
+        <article class="project-card">
+
+          <div class="project-image">
+
+            PROJECT 03
+
+          </div>
+
+          <div class="project-info">
+
+            <h3>
+
+              Project Three
+
+            </h3>
+
+            <p>
+
+              Use this card for another project,
+              experiment, or assignment.
+
+            </p>
+
+            <a href="#">
+
+              VIEW PROJECT →
+
             </a>
+
           </div>
+
         </article>
 
-        <article class="panel panel-skills">
-          <p class="eyebrow">CURRENT STATS</p>
-          <h2>MY <span>SKILLS</span></h2>
-          <div class="skill-list">
-            <div class="skill-row"><span>HTML</span><div class="bar"><i style="width: 65%"></i></div><b>LEARNING</b></div>
-            <div class="skill-row"><span>CSS</span><div class="bar"><i style="width: 55%"></i></div><b>LEARNING</b></div>
-            <div class="skill-row"><span>RESPONSIVE DESIGN</span><div class="bar"><i style="width: 40%"></i></div><b>BUILDING</b></div>
-            <div class="skill-row"><span>JAVA</span><div class="bar"><i style="width: 72%"></i></div><b>EXPERIENCE</b></div>
-          </div>
-          <p class="small-note">Change the percentages as your skills grow throughout the semester.</p>
-        </article>
 
-        <article class="panel panel-contact">
-          <p class="eyebrow">SOCIALS</p>
-          <h2>CONTACT <span>ME</span></h2>
-          <p>Want to see my code, connect, or ask about one of my projects? Add your real links below when you're ready.</p>
-          <div class="contact-links">
-            <a href="#">GITHUB <span>↗</span></a>
-            <a href="mailto:youremail@example.com">EMAIL <span>↗</span></a>
-            <a href="#">LINKEDIN <span>↗</span></a>
-          </div>
-        </article>
-      </section>
-    </main>
+      </div>
 
-    <footer class="site-footer">
-      <span>© 2026 GERSON</span>
-      <span>HTML + CSS ONLY</span>
-    </footer>
-  </div>
+
+    </section>
+
+
+
+    <!-- ========================================= -->
+    <!-- CONTACT SECTION                           -->
+    <!-- ========================================= -->
+
+    <section id="contact" class="page-section contact-section">
+
+
+      <!-- Section title -->
+      <h2 class="section-title">
+
+        CONTACT
+
+        <span>
+          ME
+        </span>
+
+      </h2>
+
+
+      <!-- Contact description -->
+      <p class="contact-description">
+
+        Want to connect or see more of my work?
+        You can add your real links below.
+
+      </p>
+
+
+      <!-- Contact buttons -->
+      <div class="contact-links">
+
+
+        <!-- GitHub link -->
+        <a href="#">
+
+          GITHUB
+
+        </a>
+
+
+        <!-- Email link -->
+        <a href="mailto:youremail@example.com">
+
+          EMAIL
+
+        </a>
+
+
+        <!-- LinkedIn link -->
+        <a href="#">
+
+          LINKEDIN
+
+        </a>
+
+
+      </div>
+
+
+    </section>
+
+
+  </main>
+
+
+
+  <!-- ========================================= -->
+  <!-- FOOTER                                    -->
+  <!-- ========================================= -->
+
+  <footer class="site-footer">
+
+
+    <p>
+
+      © 2026 Gerson Cruz-Carcamo
+
+    </p>
+
+
+    <p>
+
+      Built with HTML + CSS
+
+    </p>
+
+
+  </footer>
+
+
 </body>
+
 </html>
