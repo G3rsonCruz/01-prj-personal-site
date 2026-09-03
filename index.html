@@ -1,25 +1,257 @@
+<!-- Tells the browser that this document uses HTML5 -->
 <!DOCTYPE html>
+
+<!-- Starts the HTML document -->
+<!-- lang="en" tells the browser that the website is written in English -->
 <html lang="en">
+
+
+<!-- ============================== -->
+<!-- HEAD SECTION                   -->
+<!-- ============================== -->
+
+<!-- The head contains information ABOUT the webpage -->
 <head>
-  <meta charset="UTF-8">
-  <meta name ="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Gerson | Web Development Portfolio </title>
-  <link rel="stylesheet" href="style.css">
+
+    <!-- Allows the webpage to correctly display letters, numbers, and symbols -->
+    <meta charset="UTF-8">
+
+    <!-- Makes the website resize properly on phones and tablets -->
+    <!-- width=device-width makes the page match the width of the device -->
+    <!-- initial-scale=1.0 sets the normal starting zoom level -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- This is the text that appears on the browser tab -->
+    <title>Gerson | Portfolio</title>
+
+    <!-- Connects this HTML file to the style.css file -->
+    <!-- The CSS file will control colors, fonts, animations, layout, etc. -->
+    <link rel="stylesheet" href="style.css">
+
+<!-- Ends the head section -->
 </head>
+
+
+<!-- ============================== -->
+<!-- BODY SECTION                   -->
+<!-- ============================== -->
+
+<!-- Everything inside the body can appear on the actual webpage -->
 <body>
-  <!-- Add your HTML content here -->
-   <div class = "page-shell">
-    <header class = "site-header">
-      <a class="logo" href="#home">GC<span>.</span></a>
-      <div class="course-tag">WEB DEV // PORTFOLIO</div>
-    </header>
 
-      <!-- These hidden radio buttons let the navigation switch sections using CSS only. -->
-    <input class="tab-control" type="radio" name="page-tab" id="tab-home" checked>
-    <input class="tab-control" type="radio" name="page-tab" id="tab-bio">
-    <input class="tab-control" type="radio" name="page-tab" id="tab-projects">
-    <input class="tab-control" type="radio" name="page-tab" id="tab-skills">
-    <input class="tab-control" type="radio" name="page-tab" id="tab-contact">  
 
+    <!-- ========================== -->
+    <!-- NAVIGATION                 -->
+    <!-- ========================== -->
+
+    <!-- nav creates an area specifically for navigation links -->
+    <nav>
+
+        <!-- h2 creates a heading that we are using as the website logo -->
+        <h2>GC</h2>
+
+        <!-- Creates a link that takes the user to the Home section -->
+        <!-- #home connects to id="home" farther down the page -->
+        <a href="#home">Home</a>
+
+        <!-- Takes the user to the Bio section -->
+        <a href="#bio">Bio</a>
+
+        <!-- Takes the user to the Projects section -->
+        <a href="#projects">Projects</a>
+
+        <!-- Takes the user to the Skills section -->
+        <a href="#skills">Skills</a>
+
+        <!-- Takes the user to the Contact section -->
+        <a href="#contact">Contact</a>
+
+    <!-- Ends the navigation area -->
+    </nav>
+
+
+    <!-- ========================== -->
+    <!-- HOME SECTION               -->
+    <!-- ========================== -->
+
+    <!-- section groups related content together -->
+    <!-- id="home" gives this section the name "home" -->
+    <!-- This allows href="#home" to bring the user here -->
+    <section id="home">
+
+        <!-- p creates a paragraph -->
+        <p>Hello, I'm</p>
+
+        <!-- h1 is the main heading -->
+        <h1>GERSON</h1>
+
+        <!-- h2 creates a smaller heading underneath the main heading -->
+        <h2>Computer Science Student</h2>
+
+        <!-- Paragraph containing a short introduction -->
+        <p>
+            Welcome to my portfolio. This website will showcase
+            the projects I create while learning web development.
+        </p>
+
+        <!-- Creates a clickable link that acts like a button -->
+        <!-- Clicking it takes the user to the Projects section -->
+        <a href="#projects">View Projects</a>
+
+    <!-- Ends the Home section -->
+    </section>
+
+
+    <!-- ========================== -->
+    <!-- BIO SECTION                -->
+    <!-- ========================== -->
+
+    <!-- Creates the Bio/About Me section -->
+    <!-- id="bio" connects this section to the Bio navigation link -->
+    <section id="bio">
+
+        <!-- Main heading for the Bio section -->
+        <h1>About Me</h1>
+
+        <!-- Paragraph containing information about you -->
+        <p>
+            I'm a Computer Science student interested in
+            programming, web development, and building projects.
+        </p>
+
+    <!-- Ends the Bio section -->
+    </section>
+
+
+    <!-- ========================== -->
+    <!-- PROJECTS SECTION           -->
+    <!-- ========================== -->
+
+    <!-- Creates the Projects section -->
+    <!-- id="projects" connects to href="#projects" -->
+    <section id="projects">
+
+        <!-- Main heading for the Projects section -->
+        <h1>Projects</h1>
+
+
+        <!-- ====================== -->
+        <!-- PROJECT 1              -->
+        <!-- ====================== -->
+
+        <!-- div creates a container that groups related elements -->
+        <!-- class="project" gives this container a CSS class -->
+        <!-- We can use .project in CSS to style every project box -->
+        <div class="project">
+
+            <!-- Project title -->
+            <h2>Project 01</h2>
+
+            <!-- Project description -->
+            <p>
+                My first web development project will go here.
+            </p>
+
+        <!-- Ends the first project container -->
+        </div>
+
+
+        <!-- ====================== -->
+        <!-- PROJECT 2              -->
+        <!-- ====================== -->
+
+        <!-- Creates another project container -->
+        <!-- It uses the same class so it can have the same CSS design -->
+        <div class="project">
+
+            <!-- Second project title -->
+            <h2>Project 02</h2>
+
+            <!-- Second project description -->
+            <p>
+                My second web development project will go here.
+            </p>
+
+        <!-- Ends the second project container -->
+        </div>
+
+
+        <!-- ====================== -->
+        <!-- PROJECT 3              -->
+        <!-- ====================== -->
+
+        <!-- Creates the third project container -->
+        <div class="project">
+
+            <!-- Third project title -->
+            <h2>Project 03</h2>
+
+            <!-- Third project description -->
+            <p>
+                My third web development project will go here.
+            </p>
+
+        <!-- Ends the third project container -->
+        </div>
+
+    <!-- Ends the entire Projects section -->
+    </section>
+
+
+    <!-- ========================== -->
+    <!-- SKILLS SECTION             -->
+    <!-- ========================== -->
+
+    <!-- Creates the Skills section -->
+    <!-- id="skills" connects to the Skills navigation link -->
+    <section id="skills">
+
+        <!-- Main heading for the Skills section -->
+        <h1>Skills</h1>
+
+        <!-- Displays HTML as one of your skills -->
+        <p>HTML</p>
+
+        <!-- Displays CSS as one of your skills -->
+        <p>CSS</p>
+
+        <!-- Displays Java as one of your skills -->
+        <p>Java</p>
+
+        <!-- Displays Python as one of your skills -->
+        <p>Python</p>
+
+    <!-- Ends the Skills section -->
+    </section>
+
+
+    <!-- ========================== -->
+    <!-- CONTACT SECTION            -->
+    <!-- ========================== -->
+
+    <!-- Creates the Contact section -->
+    <!-- id="contact" connects to the Contact navigation link -->
+    <section id="contact">
+
+        <!-- Main heading for the Contact section -->
+        <h1>Contact</h1>
+
+        <!-- Short message for visitors -->
+        <p>
+            Want to get in touch with me?
+        </p>
+
+        <!-- Displays your email address -->
+        <!-- You can replace this placeholder with your real email later -->
+        <p>Email: your-email@example.com</p>
+
+    <!-- Ends the Contact section -->
+    </section>
+
+
+<!-- Ends everything visible on the webpage -->
 </body>
+
+
+<!-- Ends the entire HTML document -->
 </html>
