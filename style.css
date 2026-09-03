@@ -1,1 +1,541 @@
 /* Add you CSS here */
+/* ------------------------------
+   BASIC SETUP
+------------------------------ */
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #ffffff;
+  background:
+    linear-gradient(115deg, rgba(235, 18, 35, 0.10), transparent 34%),
+    #080808;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  opacity: 0.12;
+  background-image:
+    linear-gradient(30deg, #ffffff 1px, transparent 1px),
+    linear-gradient(120deg, #ffffff 1px, transparent 1px);
+  background-size: 42px 42px;
+  transform: skewY(-3deg) scale(1.08);
+}
+
+.page-shell {
+  width: min(1180px, 94%);
+  min-height: 100vh;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ------------------------------
+   HEADER
+------------------------------ */
+.site-header {
+  min-height: 88px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.logo {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 2rem;
+  font-weight: 900;
+  letter-spacing: -2px;
+}
+
+.logo span {
+  color: #ed1c2e;
+}
+
+.course-tag {
+  padding: 8px 14px;
+  color: #111111;
+  background: #ffffff;
+  font-weight: 900;
+  font-size: 0.8rem;
+  transform: rotate(-2deg);
+  box-shadow: 6px 6px 0 #ed1c2e;
+}
+
+/* ------------------------------
+   CSS-ONLY TAB CONTROLS
+------------------------------ */
+.tab-control {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.main-layout {
+  flex: 1;
+  display: grid;
+  grid-template-columns: 250px 1fr;
+  gap: 50px;
+  align-items: center;
+  padding: 40px 0 60px;
+}
+
+/* ------------------------------
+   PERSONA-INSPIRED MENU
+------------------------------ */
+.menu {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.menu-label {
+  margin: 0 0 4px 8px;
+  color: #ed1c2e;
+  font-weight: 900;
+  letter-spacing: 3px;
+  font-size: 0.75rem;
+}
+
+.menu-item {
+  position: relative;
+  display: inline-block;
+  min-width: 175px;
+  padding: 12px 22px;
+  color: #ffffff;
+  background: #131313;
+  border: 2px solid #ffffff;
+  font-size: 1.05rem;
+  font-weight: 900;
+  cursor: pointer;
+  transform: skew(-7deg) rotate(-1deg);
+  transition: transform 180ms ease, background 180ms ease, color 180ms ease;
+  box-shadow: 7px 7px 0 #ed1c2e;
+}
+
+.menu-item:hover,
+.menu-item:focus-visible {
+  color: #111111;
+  background: #ffffff;
+  transform: skew(-7deg) rotate(-1deg) scale(1.12) translateX(8px);
+}
+
+#tab-home:checked ~ .main-layout .menu-home,
+#tab-bio:checked ~ .main-layout .menu-bio,
+#tab-projects:checked ~ .main-layout .menu-projects,
+#tab-skills:checked ~ .main-layout .menu-skills,
+#tab-contact:checked ~ .main-layout .menu-contact {
+  color: #ffffff;
+  background: #ed1c2e;
+  border-color: #ed1c2e;
+  transform: skew(-7deg) rotate(-2deg) scale(1.07) translateX(7px);
+  box-shadow: 7px 7px 0 #ffffff;
+}
+
+/* ------------------------------
+   CONTENT PANELS
+------------------------------ */
+.content-stage {
+  position: relative;
+  min-height: 560px;
+  display: flex;
+  align-items: center;
+}
+
+.panel {
+  display: none;
+  width: 100%;
+  padding: 46px clamp(24px, 5vw, 64px);
+  background: rgba(15, 15, 15, 0.94);
+  border: 3px solid #ffffff;
+  box-shadow: 16px 16px 0 #ed1c2e;
+  transform: rotate(-0.6deg);
+  animation: panel-in 260ms ease;
+}
+
+.panel::before {
+  content: "";
+  position: absolute;
+  width: 140px;
+  height: 22px;
+  top: -14px;
+  right: 35px;
+  background: #ed1c2e;
+  transform: rotate(4deg);
+}
+
+@keyframes panel-in {
+  from {
+    opacity: 0;
+    transform: translateY(12px) rotate(-0.6deg) scale(0.985);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) rotate(-0.6deg) scale(1);
+  }
+}
+
+#tab-home:checked ~ .main-layout .panel-home,
+#tab-bio:checked ~ .main-layout .panel-bio,
+#tab-projects:checked ~ .main-layout .panel-projects,
+#tab-skills:checked ~ .main-layout .panel-skills,
+#tab-contact:checked ~ .main-layout .panel-contact {
+  display: block;
+}
+
+.eyebrow {
+  margin: 0 0 12px;
+  color: #ed1c2e;
+  font-weight: 900;
+  letter-spacing: 4px;
+  font-size: 0.82rem;
+}
+
+h1,
+h2,
+h3,
+p {
+  position: relative;
+}
+
+h1 {
+  margin: 0;
+  font-size: clamp(3rem, 7vw, 6.4rem);
+  line-height: 0.88;
+  letter-spacing: -5px;
+  font-weight: 1000;
+}
+
+h1 span,
+h2 span {
+  color: #ed1c2e;
+}
+
+h2 {
+  margin: 0 0 24px;
+  font-size: clamp(2.4rem, 6vw, 4.8rem);
+  line-height: 0.95;
+  letter-spacing: -3px;
+}
+
+.intro,
+.panel > p:not(.eyebrow):not(.small-note) {
+  max-width: 720px;
+  color: #d7d7d7;
+  font-size: 1rem;
+  line-height: 1.75;
+}
+
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-top: 28px;
+}
+
+.button {
+  display: inline-block;
+  padding: 13px 20px;
+  font-weight: 900;
+  cursor: pointer;
+  transition: transform 160ms ease;
+}
+
+.button:hover {
+  transform: scale(1.07) rotate(-1deg);
+}
+
+.primary-button {
+  color: #ffffff;
+  background: #ed1c2e;
+  border: 2px solid #ed1c2e;
+}
+
+.secondary-button {
+  color: #ffffff;
+  border: 2px solid #ffffff;
+}
+
+.status-card {
+  display: inline-flex;
+  gap: 14px;
+  margin-top: 34px;
+  padding: 10px 14px;
+  color: #111111;
+  background: #ffffff;
+  transform: rotate(1deg);
+}
+
+.status-card span {
+  color: #ed1c2e;
+  font-weight: 900;
+}
+
+/* ------------------------------
+   BIO
+------------------------------ */
+.info-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+  margin-top: 28px;
+}
+
+.info-grid div {
+  padding: 18px;
+  background: #ffffff;
+  color: #111111;
+  border-left: 7px solid #ed1c2e;
+}
+
+.info-grid small,
+.info-grid strong {
+  display: block;
+}
+
+.info-grid small {
+  margin-bottom: 6px;
+  color: #ed1c2e;
+  font-weight: 900;
+}
+
+/* ------------------------------
+   PROJECTS
+------------------------------ */
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.project-card {
+  min-height: 220px;
+  padding: 22px;
+  color: #ffffff;
+  text-decoration: none;
+  background: #151515;
+  border: 2px solid #ffffff;
+  transition: transform 180ms ease, background 180ms ease, color 180ms ease;
+}
+
+.project-card:hover {
+  color: #111111;
+  background: #ffffff;
+  transform: scale(1.04) rotate(-1deg);
+}
+
+.project-number {
+  color: #ed1c2e;
+  font-size: 2.2rem;
+  font-weight: 1000;
+}
+
+.project-card h3 {
+  margin: 14px 0 8px;
+  font-size: 1.4rem;
+}
+
+.project-card p {
+  min-height: 72px;
+  line-height: 1.55;
+}
+
+.project-card strong {
+  color: #ed1c2e;
+}
+
+/* ------------------------------
+   SKILLS
+------------------------------ */
+.skill-list {
+  display: grid;
+  gap: 22px;
+}
+
+.skill-row {
+  display: grid;
+  grid-template-columns: 170px 1fr 100px;
+  gap: 16px;
+  align-items: center;
+}
+
+.skill-row > span,
+.skill-row > b {
+  font-size: 0.86rem;
+  font-weight: 900;
+}
+
+.skill-row > b {
+  color: #ed1c2e;
+  text-align: right;
+}
+
+.bar {
+  height: 18px;
+  overflow: hidden;
+  background: #292929;
+  border: 2px solid #ffffff;
+  transform: skew(-10deg);
+}
+
+.bar i {
+  display: block;
+  height: 100%;
+  background: #ed1c2e;
+}
+
+.small-note {
+  margin-top: 26px;
+  color: #a8a8a8;
+  font-size: 0.85rem;
+}
+
+/* ------------------------------
+   CONTACT
+------------------------------ */
+.contact-links {
+  display: grid;
+  max-width: 520px;
+  gap: 14px;
+  margin-top: 28px;
+}
+
+.contact-links a {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px 18px;
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 900;
+  background: #151515;
+  border: 2px solid #ffffff;
+  transition: transform 160ms ease, background 160ms ease, color 160ms ease;
+}
+
+.contact-links a:hover {
+  color: #111111;
+  background: #ffffff;
+  transform: translateX(8px) scale(1.02);
+}
+
+.contact-links span {
+  color: #ed1c2e;
+}
+
+/* ------------------------------
+   FOOTER
+------------------------------ */
+.site-footer {
+  min-height: 68px;
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  align-items: center;
+  color: #888888;
+  font-size: 0.75rem;
+  font-weight: 900;
+  letter-spacing: 1.5px;
+}
+
+/* ------------------------------
+   RESPONSIVE DESIGN
+------------------------------ */
+@media (max-width: 850px) {
+  .main-layout {
+    grid-template-columns: 1fr;
+    gap: 28px;
+    padding-top: 18px;
+  }
+
+  .menu {
+    width: 100%;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .menu-label {
+    width: 100%;
+  }
+
+  .menu-item {
+    min-width: auto;
+    padding: 10px 14px;
+    font-size: 0.88rem;
+    box-shadow: 4px 4px 0 #ed1c2e;
+  }
+
+  .content-stage {
+    min-height: 0;
+  }
+
+  .panel {
+    padding: 34px 24px;
+    box-shadow: 10px 10px 0 #ed1c2e;
+  }
+
+  .project-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .project-card {
+    min-height: 0;
+  }
+}
+
+@media (max-width: 600px) {
+  .site-header {
+    min-height: 74px;
+  }
+
+  .course-tag {
+    font-size: 0.68rem;
+    box-shadow: 4px 4px 0 #ed1c2e;
+  }
+
+  .menu-item:hover,
+  .menu-item:focus-visible,
+  #tab-home:checked ~ .main-layout .menu-home,
+  #tab-bio:checked ~ .main-layout .menu-bio,
+  #tab-projects:checked ~ .main-layout .menu-projects,
+  #tab-skills:checked ~ .main-layout .menu-skills,
+  #tab-contact:checked ~ .main-layout .menu-contact {
+    transform: skew(-5deg) scale(1.04);
+  }
+
+  h1 {
+    letter-spacing: -3px;
+  }
+
+  .info-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .skill-row {
+    grid-template-columns: 1fr;
+    gap: 7px;
+  }
+
+  .skill-row > b {
+    text-align: left;
+  }
+
+  .site-footer {
+    align-items: flex-start;
+    flex-direction: column;
+    padding: 18px 0;
+  }
+}
