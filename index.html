@@ -1,257 +1,126 @@
-<!-- Tells the browser that this document uses HTML5 -->
 <!DOCTYPE html>
-
-<!-- Starts the HTML document -->
-<!-- lang="en" tells the browser that the website is written in English -->
 <html lang="en">
-
-
-<!-- ============================== -->
-<!-- HEAD SECTION                   -->
-<!-- ============================== -->
-
-<!-- The head contains information ABOUT the webpage -->
 <head>
-
-    <!-- Allows the webpage to correctly display letters, numbers, and symbols -->
-    <meta charset="UTF-8">
-
-    <!-- Makes the website resize properly on phones and tablets -->
-    <!-- width=device-width makes the page match the width of the device -->
-    <!-- initial-scale=1.0 sets the normal starting zoom level -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <!-- This is the text that appears on the browser tab -->
-    <title>Gerson | Portfolio</title>
-
-    <!-- Connects this HTML file to the style.css file -->
-    <!-- The CSS file will control colors, fonts, animations, layout, etc. -->
-    <link rel="stylesheet" href="style.css">
-
-<!-- Ends the head section -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gerson | Web Development Portfolio</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
-
-
-<!-- ============================== -->
-<!-- BODY SECTION                   -->
-<!-- ============================== -->
-
-<!-- Everything inside the body can appear on the actual webpage -->
 <body>
-
-
-    <!-- ========================== -->
-    <!-- NAVIGATION                 -->
-    <!-- ========================== -->
-
-    <!-- nav creates an area specifically for navigation links -->
-    <nav>
-
-        <!-- h2 creates a heading that we are using as the website logo -->
-        <h2>GC</h2>
-
-        <!-- Creates a link that takes the user to the Home section -->
-        <!-- #home connects to id="home" farther down the page -->
-        <a href="#home">Home</a>
-
-        <!-- Takes the user to the Bio section -->
-        <a href="#bio">Bio</a>
-
-        <!-- Takes the user to the Projects section -->
-        <a href="#projects">Projects</a>
-
-        <!-- Takes the user to the Skills section -->
-        <a href="#skills">Skills</a>
-
-        <!-- Takes the user to the Contact section -->
-        <a href="#contact">Contact</a>
-
-    <!-- Ends the navigation area -->
-    </nav>
-
-
-    <!-- ========================== -->
-    <!-- HOME SECTION               -->
-    <!-- ========================== -->
-
-    <!-- section groups related content together -->
-    <!-- id="home" gives this section the name "home" -->
-    <!-- This allows href="#home" to bring the user here -->
-    <section id="home">
-
-        <!-- p creates a paragraph -->
-        <p>Hello, I'm</p>
-
-        <!-- h1 is the main heading -->
-        <h1>GERSON</h1>
-
-        <!-- h2 creates a smaller heading underneath the main heading -->
-        <h2>Computer Science Student</h2>
-
-        <!-- Paragraph containing a short introduction -->
-        <p>
-            Welcome to my portfolio. This website will showcase
-            the projects I create while learning web development.
-        </p>
-
-        <!-- Creates a clickable link that acts like a button -->
-        <!-- Clicking it takes the user to the Projects section -->
-        <a href="#projects">View Projects</a>
-
-    <!-- Ends the Home section -->
-    </section>
-
-
-    <!-- ========================== -->
-    <!-- BIO SECTION                -->
-    <!-- ========================== -->
-
-    <!-- Creates the Bio/About Me section -->
-    <!-- id="bio" connects this section to the Bio navigation link -->
-    <section id="bio">
-
-        <!-- Main heading for the Bio section -->
-        <h1>About Me</h1>
-
-        <!-- Paragraph containing information about you -->
-        <p>
-            I'm a Computer Science student interested in
-            programming, web development, and building projects.
-        </p>
-
-    <!-- Ends the Bio section -->
-    </section>
-
-
-    <!-- ========================== -->
-    <!-- PROJECTS SECTION           -->
-    <!-- ========================== -->
-
-    <!-- Creates the Projects section -->
-    <!-- id="projects" connects to href="#projects" -->
-    <section id="projects">
-
-        <!-- Main heading for the Projects section -->
-        <h1>Projects</h1>
-
-
-        <!-- ====================== -->
-        <!-- PROJECT 1              -->
-        <!-- ====================== -->
-
-        <!-- div creates a container that groups related elements -->
-        <!-- class="project" gives this container a CSS class -->
-        <!-- We can use .project in CSS to style every project box -->
-        <div class="project">
-
-            <!-- Project title -->
-            <h2>Project 01</h2>
-
-            <!-- Project description -->
-            <p>
-                My first web development project will go here.
-            </p>
-
-        <!-- Ends the first project container -->
-        </div>
-
-
-        <!-- ====================== -->
-        <!-- PROJECT 2              -->
-        <!-- ====================== -->
-
-        <!-- Creates another project container -->
-        <!-- It uses the same class so it can have the same CSS design -->
-        <div class="project">
-
-            <!-- Second project title -->
-            <h2>Project 02</h2>
-
-            <!-- Second project description -->
-            <p>
-                My second web development project will go here.
-            </p>
-
-        <!-- Ends the second project container -->
-        </div>
-
-
-        <!-- ====================== -->
-        <!-- PROJECT 3              -->
-        <!-- ====================== -->
-
-        <!-- Creates the third project container -->
-        <div class="project">
-
-            <!-- Third project title -->
-            <h2>Project 03</h2>
-
-            <!-- Third project description -->
-            <p>
-                My third web development project will go here.
-            </p>
-
-        <!-- Ends the third project container -->
-        </div>
-
-    <!-- Ends the entire Projects section -->
-    </section>
-
-
-    <!-- ========================== -->
-    <!-- SKILLS SECTION             -->
-    <!-- ========================== -->
-
-    <!-- Creates the Skills section -->
-    <!-- id="skills" connects to the Skills navigation link -->
-    <section id="skills">
-
-        <!-- Main heading for the Skills section -->
-        <h1>Skills</h1>
-
-        <!-- Displays HTML as one of your skills -->
-        <p>HTML</p>
-
-        <!-- Displays CSS as one of your skills -->
-        <p>CSS</p>
-
-        <!-- Displays Java as one of your skills -->
-        <p>Java</p>
-
-        <!-- Displays Python as one of your skills -->
-        <p>Python</p>
-
-    <!-- Ends the Skills section -->
-    </section>
-
-
-    <!-- ========================== -->
-    <!-- CONTACT SECTION            -->
-    <!-- ========================== -->
-
-    <!-- Creates the Contact section -->
-    <!-- id="contact" connects to the Contact navigation link -->
-    <section id="contact">
-
-        <!-- Main heading for the Contact section -->
-        <h1>Contact</h1>
-
-        <!-- Short message for visitors -->
-        <p>
-            Want to get in touch with me?
-        </p>
-
-        <!-- Displays your email address -->
-        <!-- You can replace this placeholder with your real email later -->
-        <p>Email: your-email@example.com</p>
-
-    <!-- Ends the Contact section -->
-    </section>
-
-
-<!-- Ends everything visible on the webpage -->
+  <div class="page-shell">
+    <header class="site-header">
+      <a class="logo" href="#home">GC<span>.</span></a>
+      <div class="course-tag">WEB DEV // PORTFOLIO</div>
+    </header>
+
+    <!-- These hidden radio buttons let the navigation switch sections using CSS only. -->
+    <input class="tab-control" type="radio" name="page-tab" id="tab-home" checked>
+    <input class="tab-control" type="radio" name="page-tab" id="tab-bio">
+    <input class="tab-control" type="radio" name="page-tab" id="tab-projects">
+    <input class="tab-control" type="radio" name="page-tab" id="tab-skills">
+    <input class="tab-control" type="radio" name="page-tab" id="tab-contact">
+
+    <main class="main-layout">
+      <nav class="menu" aria-label="Main navigation">
+        <p class="menu-label">SELECT</p>
+        <label for="tab-home" class="menu-item menu-home">HOME</label>
+        <label for="tab-bio" class="menu-item menu-bio">BIO</label>
+        <label for="tab-projects" class="menu-item menu-projects">PROJECTS</label>
+        <label for="tab-skills" class="menu-item menu-skills">SKILLS</label>
+        <label for="tab-contact" class="menu-item menu-contact">CONTACT</label>
+      </nav>
+
+      <section class="content-stage">
+        <article class="panel panel-home">
+          <p class="eyebrow">HELLO, I'M GERSON.</p>
+          <h1>I BUILD<br><span>WEB EXPERIENCES.</span></h1>
+          <p class="intro">
+            A beginner-friendly portfolio for the projects I create in my college web development course.
+            This site will grow with me as I learn HTML, CSS, responsive design, and more.
+          </p>
+          <div class="hero-actions">
+            <label for="tab-projects" class="button primary-button">VIEW PROJECTS</label>
+            <label for="tab-bio" class="button secondary-button">ABOUT ME</label>
+          </div>
+
+          <div class="status-card">
+            <span>STATUS</span>
+            <strong>LEARNING + BUILDING</strong>
+          </div>
+        </article>
+
+        <article class="panel panel-bio">
+          <p class="eyebrow">PERSONAL INFO</p>
+          <h2>ABOUT <span>ME</span></h2>
+          <p>
+            I'm Gerson, a Computer Science student building my web development skills one project at a time.
+            I like clean interfaces, bold visuals, and websites that feel fun to use instead of static.
+          </p>
+          <p>
+            This portfolio is where I'll document class projects, experiments, and the progress I make throughout the course.
+          </p>
+          <div class="info-grid">
+            <div><small>MAJOR</small><strong>Computer Science</strong></div>
+            <div><small>FOCUS</small><strong>Web Development</strong></div>
+            <div><small>LEVEL</small><strong>Beginner / Growing</strong></div>
+            <div><small>STYLE</small><strong>Bold + Interactive</strong></div>
+          </div>
+        </article>
+
+        <article class="panel panel-projects">
+          <p class="eyebrow">MISSION LOG</p>
+          <h2>MY <span>PROJECTS</span></h2>
+          <div class="project-grid">
+            <a class="project-card" href="#" aria-label="Project one placeholder">
+              <span class="project-number">01</span>
+              <h3>PROJECT ONE</h3>
+              <p>Your first class project can go here.</p>
+              <strong>COMING SOON →</strong>
+            </a>
+            <a class="project-card" href="#" aria-label="Project two placeholder">
+              <span class="project-number">02</span>
+              <h3>PROJECT TWO</h3>
+              <p>Add a screenshot, short description, and link later.</p>
+              <strong>COMING SOON →</strong>
+            </a>
+            <a class="project-card" href="#" aria-label="Project three placeholder">
+              <span class="project-number">03</span>
+              <h3>PROJECT THREE</h3>
+              <p>Use this card for another web development assignment.</p>
+              <strong>COMING SOON →</strong>
+            </a>
+          </div>
+        </article>
+
+        <article class="panel panel-skills">
+          <p class="eyebrow">CURRENT STATS</p>
+          <h2>MY <span>SKILLS</span></h2>
+          <div class="skill-list">
+            <div class="skill-row"><span>HTML</span><div class="bar"><i style="width: 65%"></i></div><b>LEARNING</b></div>
+            <div class="skill-row"><span>CSS</span><div class="bar"><i style="width: 55%"></i></div><b>LEARNING</b></div>
+            <div class="skill-row"><span>RESPONSIVE DESIGN</span><div class="bar"><i style="width: 40%"></i></div><b>BUILDING</b></div>
+            <div class="skill-row"><span>JAVA</span><div class="bar"><i style="width: 72%"></i></div><b>EXPERIENCE</b></div>
+          </div>
+          <p class="small-note">Change the percentages as your skills grow throughout the semester.</p>
+        </article>
+
+        <article class="panel panel-contact">
+          <p class="eyebrow">SOCIALS</p>
+          <h2>CONTACT <span>ME</span></h2>
+          <p>Want to see my code, connect, or ask about one of my projects? Add your real links below when you're ready.</p>
+          <div class="contact-links">
+            <a href="#">GITHUB <span>↗</span></a>
+            <a href="mailto:youremail@example.com">EMAIL <span>↗</span></a>
+            <a href="#">LINKEDIN <span>↗</span></a>
+          </div>
+        </article>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <span>© 2026 GERSON</span>
+      <span>HTML + CSS ONLY</span>
+    </footer>
+  </div>
 </body>
-
-
-<!-- Ends the entire HTML document -->
 </html>
