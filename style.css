@@ -1,42 +1,42 @@
 /* ========================================= */
-/* BASIC RESET                               */
+/* BASIC SETUP                               */
 /* ========================================= */
 
 
-/* Applies box-sizing to every element */
+/* Applies these rules to every element */
 * {
 
-  /* Includes padding and border inside width/height */
+  /* Makes sizing easier to control */
   box-sizing: border-box;
 
 }
 
 
-/* Controls the whole HTML page */
+/* Controls the entire HTML page */
 html {
 
-  /* Makes navigation links scroll smoothly */
+  /* Smooth scrolling when navigation is clicked */
   scroll-behavior: smooth;
 
 }
 
 
-/* Main page body */
+/* Main website body */
 body {
 
-  /* Removes the browser's default spacing */
+  /* Removes default browser margins */
   margin: 0;
 
-  /* Main font */
+  /* Main website font */
   font-family: Arial, Helvetica, sans-serif;
 
-  /* Main text color */
+  /* White text */
   color: #ffffff;
 
-  /* Dark background */
+  /* Main black background */
   background: #050505;
 
-  /* Prevents accidental horizontal scrolling */
+  /* Prevents horizontal scrolling */
   overflow-x: hidden;
 
 }
@@ -51,64 +51,63 @@ body {
 /* Top navigation bar */
 .site-header {
 
-  /* Keeps the navigation visible while scrolling */
+  /* Keeps navigation visible while scrolling */
   position: sticky;
 
-  /* Sticks to top of screen */
+  /* Sticks header to top */
   top: 0;
 
-  /* Keeps header above the rest of the page */
+  /* Keeps navigation above other elements */
   z-index: 1000;
 
-  /* Places logo and navigation side by side */
+  /* Places logo and menu side by side */
   display: flex;
 
   /* Vertically centers them */
   align-items: center;
 
-  /* Pushes logo left and nav right */
+  /* Pushes them apart */
   justify-content: space-between;
 
-  /* Adds spacing inside header */
+  /* Adds space inside header */
   padding: 12px 5%;
 
-  /* Almost-solid black background */
-  background: rgba(0, 0, 0, 0.96);
+  /* Almost solid black */
+  background: rgba(0, 0, 0, 0.97);
 
-  /* Adds a subtle divider */
+  /* Divider underneath */
   border-bottom: 1px solid #242424;
 
 }
 
 
-/* Link containing the logo */
+/* Removes underline from logo link */
 .logo-link {
 
-  /* Removes underline */
   text-decoration: none;
 
 }
 
 
-/* Logo image */
+/* Personal logo */
 .site-logo {
 
-  /* Controls logo width */
+  /* Controls logo size */
   width: 180px;
 
-  /* Keeps image proportions correct */
+  /* Keeps correct proportions */
   height: auto;
 
-  /* Removes unwanted inline-image spacing */
+  /* Removes inline image spacing */
   display: block;
 
 }
 
 
-/* Navigation container */
+/* Navigation menu */
 .main-nav {
 
-  /* Places links beside each other */
+  /* Puts links beside each other */
   display: flex;
 
   /* Space between links */
@@ -120,26 +119,25 @@ body {
 /* Navigation links */
 .main-nav a {
 
-  /* Allows transform animations */
+  /* Allows animations */
   display: inline-block;
 
   /* Removes underline */
   text-decoration: none;
 
-  /* Makes text white */
+  /* White text */
   color: #ffffff;
 
-  /* Makes text bold */
+  /* Bold text */
   font-weight: 900;
 
-  /* Gives links clickable space */
+  /* Adds clickable space */
   padding: 12px 16px;
 
-  /* Smooth hover animation */
+  /* Smooth animation */
   transition:
     transform 0.2s ease,
-    background 0.2s ease,
-    color 0.2s ease;
+    background 0.2s ease;
 
 }
 
@@ -147,10 +145,10 @@ body {
 /* Navigation hover */
 .main-nav a:hover {
 
-  /* Red background */
+  /* Persona-style red background */
   background: #ed1c2e;
 
-  /* Makes link bigger and slightly angled */
+  /* Makes link larger */
   transform: scale(1.14) rotate(-2deg);
 
 }
@@ -165,7 +163,7 @@ body {
 /* Main hero section */
 .hero-section {
 
-  /* Makes hero large */
+  /* Makes section tall */
   min-height: 680px;
 
   /* Creates two columns */
@@ -174,190 +172,165 @@ body {
   /* Left text + right image */
   grid-template-columns: 43% 57%;
 
-  /* Centers content vertically */
+  /* Makes both columns same height */
   align-items: stretch;
 
-  /* Keeps graphic edges clean */
+  /* Hides image overflow */
   overflow: hidden;
 
-  /* Dark background */
+  /* Black background */
   background: #050505;
 
-  /* Divider underneath */
+  /* Divider */
   border-bottom: 2px solid #333333;
 
 }
 
 
-/* Left hero content */
+/* Hero text area */
 .hero-content {
 
-  /* Centers text vertically */
+  /* Flex makes vertical positioning easier */
   display: flex;
 
-  /* Stacks items vertically */
+  /* Stacks items */
   flex-direction: column;
 
-  /* Centers vertically */
+  /* Centers text vertically */
   justify-content: center;
 
-  /* Adds spacing around text */
+  /* Adds spacing */
   padding: 70px 5% 70px 8%;
-
-  /* Keeps content above other things */
-  position: relative;
-
-  z-index: 2;
 
 }
 
 
-/* "Hello, I'm" text */
+/* Hello text */
 .hero-small-text {
 
-  /* Removes excess spacing */
   margin: 0 0 10px;
 
-  /* Letter spacing */
   letter-spacing: 2px;
 
-  /* Slightly larger font */
   font-size: 1.05rem;
 
 }
 
 
-/* Main first name */
+/* GERSON heading */
 .hero-name {
 
-  /* Removes default heading margin */
+  /* Removes default margin */
   margin: 0;
 
-  /* Large responsive size */
+  /* Responsive large text */
   font-size: clamp(4rem, 7vw, 7rem);
 
   /* Very bold */
   font-weight: 1000;
 
-  /* Tight letters */
+  /* Makes letters closer together */
   letter-spacing: -5px;
 
-  /* Tight line height */
+  /* Reduces line spacing */
   line-height: 0.9;
 
-  /* Adds depth */
-  text-shadow:
-    6px 6px 0 #202020;
+  /* Creates depth */
+  text-shadow: 6px 6px 0 #202020;
 
 }
 
 
-/* Last-name sticker */
+/* Last name sticker */
 .name-sticker {
 
-  /* Makes box only as wide as text */
+  /* Makes box only as wide as the text */
   width: fit-content;
 
-  /* White background */
+  /* White paper */
   background: #ffffff;
 
-  /* Black text */
+  /* Black letters */
   color: #111111;
 
-  /* Makes text bold */
+  /* Very bold */
   font-weight: 1000;
 
-  /* Responsive size */
+  /* Responsive font */
   font-size: clamp(1.3rem, 2.3vw, 2rem);
 
-  /* Adds space around text */
+  /* Adds spacing inside */
   padding: 5px 14px;
 
-  /* Slight tilt */
+  /* Tilts sticker */
   transform: rotate(-2deg);
 
-  /* Adds red shadow */
+  /* Red shadow */
   box-shadow: 7px 7px 0 #ed1c2e;
 
-  /* Space below */
+  /* Adds space underneath */
   margin: 8px 0 26px;
 
 }
 
 
-/* Developer title */
+/* Aspiring Developer text */
 .hero-title {
 
-  /* Red accent color */
   color: #ed1c2e;
 
-  /* Larger text */
   font-size: 1.2rem;
 
-  /* Bold */
   font-weight: 900;
 
-  /* Small spacing */
   margin-bottom: 12px;
 
 }
 
 
-/* Main hero description */
+/* Hero description */
 .hero-description {
 
-  /* Limits width for easier reading */
   max-width: 520px;
 
-  /* Slight gray color */
   color: #d2d2d2;
 
-  /* Adds vertical breathing room */
   line-height: 1.7;
 
 }
 
 
-/* Buttons container */
+/* Button container */
 .hero-buttons {
 
-  /* Places buttons beside each other */
   display: flex;
 
-  /* Allows wrapping */
   flex-wrap: wrap;
 
-  /* Adds space between buttons */
   gap: 16px;
 
-  /* Adds space above */
   margin-top: 28px;
 
 }
 
 
-/* Shared button style */
+/* Shared button design */
 .button {
 
-  /* Removes underline */
   text-decoration: none;
 
-  /* Bold text */
   font-weight: 900;
 
-  /* Adds click area */
   padding: 14px 24px;
 
-  /* Smooth hover */
   transition: transform 0.2s ease;
 
 }
 
 
-/* Button hover */
+/* Button animation */
 .button:hover {
 
-  /* Makes button slightly larger */
   transform: scale(1.08) rotate(-1deg);
 
 }
@@ -366,13 +339,10 @@ body {
 /* Red button */
 .red-button {
 
-  /* White text */
   color: #ffffff;
 
-  /* Red background */
   background: #ed1c2e;
 
-  /* Red border */
   border: 2px solid #ed1c2e;
 
 }
@@ -381,13 +351,10 @@ body {
 /* Outline button */
 .outline-button {
 
-  /* White text */
   color: #ffffff;
 
-  /* Transparent background */
   background: transparent;
 
-  /* White border */
   border: 2px solid #ffffff;
 
 }
@@ -396,10 +363,8 @@ body {
 /* Right side of hero */
 .hero-image-area {
 
-  /* Makes the image fill its half */
   position: relative;
 
-  /* Prevents image overflow */
   overflow: hidden;
 
 }
@@ -408,19 +373,17 @@ body {
 /* Hero image */
 .hero-image {
 
-  /* Makes image fill container width */
+  /* Makes image fill entire right section */
   width: 100%;
 
-  /* Makes image fill container height */
   height: 100%;
 
-  /* Crops image instead of stretching it */
+  /* Crops without stretching */
   object-fit: cover;
 
-  /* Focuses crop toward center */
+  /* Keeps important part near center */
   object-position: center;
 
-  /* Makes it behave like a block */
   display: block;
 
 }
@@ -428,74 +391,61 @@ body {
 
 
 /* ========================================= */
-/* GENERAL SECTION STYLES                    */
+/* SHARED SECTION STYLES                     */
 /* ========================================= */
 
 
-/* Shared settings for major sections */
+/* Used by About, Skills, Projects, and Contact */
 .page-section {
 
-  /* Adds vertical and horizontal spacing */
   padding: 80px 7%;
 
-  /* Adds divider */
   border-bottom: 2px solid #2b2b2b;
 
 }
 
 
-/* Heading wrapper */
+/* Space underneath section headings */
 .section-heading {
 
-  /* Adds space below heading */
   margin-bottom: 35px;
 
 }
 
 
-/* Main section headings */
+/* Main section title */
 .section-heading h2 {
 
-  /* Removes default margin */
   margin: 0;
 
-  /* Large responsive size */
   font-size: clamp(2.8rem, 5vw, 4.7rem);
 
-  /* Bold */
   font-weight: 1000;
 
-  /* Tight spacing */
   letter-spacing: -4px;
 
 }
 
 
-/* Red accent text */
+/* Red words inside headings */
 .section-heading h2 span {
 
-  /* Persona-like red */
   color: #ed1c2e;
 
 }
 
 
-/* Red underline below headings */
+/* Decorative red underline */
 .heading-underline {
 
-  /* Underline width */
   width: 180px;
 
-  /* Underline thickness */
   height: 7px;
 
-  /* Red color */
   background: #ed1c2e;
 
-  /* Adds top space */
   margin-top: 8px;
 
-  /* Makes line slightly angled */
   transform: skewX(-25deg) rotate(-1deg);
 
 }
@@ -507,10 +457,9 @@ body {
 /* ========================================= */
 
 
-/* About section background */
+/* Slight red glow behind About */
 .about-section {
 
-  /* Adds subtle angled red glow */
   background:
     linear-gradient(
       120deg,
@@ -521,19 +470,15 @@ body {
 }
 
 
-/* About content layout */
+/* Two-column About layout */
 .about-layout {
 
-  /* Creates two columns */
   display: grid;
 
-  /* Text and image */
   grid-template-columns: 1fr 1.05fr;
 
-  /* Space between them */
   gap: 50px;
 
-  /* Centers vertically */
   align-items: center;
 
 }
@@ -542,46 +487,36 @@ body {
 /* About paragraphs */
 .about-text p {
 
-  /* Gray-white text */
   color: #d5d5d5;
 
-  /* Easier reading */
   line-height: 1.8;
 
-  /* Slightly larger */
   font-size: 1.05rem;
 
 }
 
 
-/* Image box */
+/* Frame around About image */
 .about-image-box {
 
-  /* Creates a frame */
   border: 2px solid #ffffff;
 
-  /* Red shadow */
   box-shadow: 12px 12px 0 #ed1c2e;
 
-  /* Prevents image from overflowing */
   overflow: hidden;
 
-  /* Slight angle */
   transform: rotate(-1deg);
 
 }
 
 
-/* About image */
+/* About artwork */
 .about-image {
 
-  /* Fills width */
   width: 100%;
 
-  /* Makes image responsive */
   height: auto;
 
-  /* Removes inline spacing */
   display: block;
 
 }
@@ -596,13 +531,10 @@ body {
 /* Skills grid */
 .skills-grid {
 
-  /* Uses CSS Grid */
   display: grid;
 
-  /* Creates three columns */
   grid-template-columns: repeat(3, minmax(0, 1fr));
 
-  /* Space between cards */
   gap: 22px;
 
 }
@@ -611,19 +543,14 @@ body {
 /* Individual skill card */
 .skill-card {
 
-  /* Dark background */
   background: #101010;
 
-  /* White border */
   border: 2px solid #444444;
 
-  /* Adds inside spacing */
   padding: 28px 20px;
 
-  /* Centers content */
   text-align: center;
 
-  /* Smooth hover */
   transition:
     transform 0.2s ease,
     border-color 0.2s ease,
@@ -632,34 +559,27 @@ body {
 }
 
 
-/* Skill hover */
+/* Skill card hover */
 .skill-card:hover {
 
-  /* Moves upward */
   transform: translateY(-8px) rotate(-1deg);
 
-  /* Red border */
   border-color: #ed1c2e;
 
-  /* Red shadow */
   box-shadow: 8px 8px 0 #ed1c2e;
 
 }
 
 
-/* Skill icon image */
+/* Technology logo */
 .skill-icon {
 
-  /* Controls image size */
   width: 78px;
 
-  /* Keeps proportions */
   height: 78px;
 
-  /* Prevents stretching */
   object-fit: contain;
 
-  /* Centers icon */
   display: block;
 
   margin: 0 auto 18px;
@@ -667,13 +587,11 @@ body {
 }
 
 
-/* Skill name */
+/* Skill heading */
 .skill-card h3 {
 
-  /* Adds spacing */
   margin: 0 0 10px;
 
-  /* Larger heading */
   font-size: 1.3rem;
 
 }
@@ -682,13 +600,10 @@ body {
 /* Skill description */
 .skill-card p {
 
-  /* Light gray */
   color: #bcbcbc;
 
-  /* Better line spacing */
   line-height: 1.5;
 
-  /* Removes bottom margin */
   margin-bottom: 0;
 
 }
@@ -700,16 +615,13 @@ body {
 /* ========================================= */
 
 
-/* Projects grid */
+/* Three project cards */
 .projects-grid {
 
-  /* Grid layout */
   display: grid;
 
-  /* Three columns */
   grid-template-columns: repeat(3, minmax(0, 1fr));
 
-  /* Space between cards */
   gap: 24px;
 
 }
@@ -718,19 +630,16 @@ body {
 /* Project card */
 .project-card {
 
-  /* Dark background */
   background: #101010;
 
-  /* Border */
   border: 2px solid #444444;
 
-  /* Prevents preview from spilling out */
   overflow: hidden;
 
-  /* Smooth hover */
   transition:
     transform 0.2s ease,
-    border-color 0.2s ease;
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
 
 }
 
@@ -738,125 +647,224 @@ body {
 /* Project hover */
 .project-card:hover {
 
-  /* Moves card up */
   transform: translateY(-8px);
 
-  /* Red border */
   border-color: #ed1c2e;
+
+  box-shadow: 8px 8px 0 #ed1c2e;
 
 }
 
 
-/* Project preview area */
-.project-preview {
+/* Real project screenshot */
+.project-image {
 
-  /* Gives the preview height */
-  height: 190px;
+  width: 100%;
 
-  /* Centers the number */
+  height: 230px;
+
+  /* Crops without stretching */
+  object-fit: cover;
+
+  object-position: top center;
+
+  display: block;
+
+  border-bottom: 2px solid #333333;
+
+}
+
+
+/* Placeholder used when there is no screenshot */
+.project-placeholder {
+
+  height: 230px;
+
   display: flex;
+
+  flex-direction: column;
 
   align-items: center;
 
   justify-content: center;
 
-  /* Dark angular background */
-  background:
-    linear-gradient(
-      135deg,
-      #171717 0%,
-      #070707 55%,
-      #181818 100%
-    );
-
-  /* Adds line under image */
-  border-bottom: 2px solid #333333;
-
-  /* Decorative red diagonal shapes */
   position: relative;
 
   overflow: hidden;
 
+  border-bottom: 2px solid #333333;
+
 }
 
 
-/* Decorative red shape */
-.project-preview::before {
+/* Pet project placeholder */
+.pet-project {
+
+  background:
+    linear-gradient(
+      135deg,
+      #181818,
+      #070707
+    );
+
+}
+
+
+/* Creates red diagonal strip */
+.pet-project::before {
 
   content: "";
 
   position: absolute;
 
-  width: 65%;
+  width: 150%;
 
-  height: 38px;
+  height: 42px;
 
   background: #ed1c2e;
 
-  transform: rotate(-22deg);
+  transform: rotate(-15deg);
 
-  left: -20%;
+  top: 35px;
 
-  top: 30px;
+  left: -25%;
 
-  opacity: 0.8;
+  opacity: 0.85;
 
 }
 
 
-/* Second decorative shape */
-.project-preview::after {
+/* Second diagonal strip */
+.pet-project::after {
 
   content: "";
 
   position: absolute;
 
-  width: 60%;
+  width: 140%;
 
   height: 28px;
 
   background: #ed1c2e;
 
-  transform: rotate(-18deg);
+  transform: rotate(-12deg);
 
-  right: -20%;
+  bottom: 28px;
 
-  bottom: 25px;
+  right: -30%;
 
-  opacity: 0.65;
+  opacity: 0.55;
+
+}
+
+
+/* PET text */
+.pet-project span {
+
+  position: relative;
+
+  z-index: 2;
+
+  color: #ed1c2e;
+
+  font-size: 1rem;
+
+  letter-spacing: 5px;
+
+  font-weight: 900;
+
+}
+
+
+/* FOSTERING text */
+.pet-project strong {
+
+  position: relative;
+
+  z-index: 2;
+
+  font-size: 2rem;
+
+  font-weight: 1000;
+
+}
+
+
+/* WEBSITE text */
+.pet-project small {
+
+  position: relative;
+
+  z-index: 2;
+
+  letter-spacing: 5px;
+
+}
+
+
+/* Coming Soon visual */
+.coming-soon-preview {
+
+  background:
+    repeating-linear-gradient(
+      -45deg,
+      #080808,
+      #080808 18px,
+      #111111 18px,
+      #111111 36px
+    );
+
+}
+
+
+/* Large 03 */
+.coming-soon-preview > span {
+
+  color: #ed1c2e;
+
+  font-size: 3rem;
+
+  font-weight: 1000;
+
+}
+
+
+/* COMING SOON text */
+.coming-soon-preview strong {
+
+  margin-top: 10px;
+
+  font-size: 1.2rem;
+
+  letter-spacing: 4px;
+
+}
+
+
+/* Slightly fades Coming Soon card */
+.coming-soon-card {
+
+  opacity: 0.82;
+
+}
+
+
+/* Project information */
+.project-info {
+
+  padding: 22px;
 
 }
 
 
 /* Project number */
-.project-preview span {
+.project-number {
 
-  /* Keeps number above decorations */
-  position: relative;
+  color: #ed1c2e;
 
-  z-index: 2;
+  font-size: 2rem;
 
-  /* Large size */
-  font-size: 4rem;
-
-  /* Bold */
   font-weight: 1000;
-
-  /* White text */
-  color: #ffffff;
-
-  /* Black shadow */
-  text-shadow:
-    6px 6px 0 #000000;
-
-}
-
-
-/* Project info area */
-.project-info {
-
-  /* Inside spacing */
-  padding: 22px;
 
 }
 
@@ -864,67 +872,161 @@ body {
 /* Project title */
 .project-info h3 {
 
-  /* Removes top margin */
-  margin-top: 0;
+  margin: 8px 0 12px;
 
-  /* Larger font */
   font-size: 1.4rem;
 
 }
 
 
-/* Project paragraph */
+/* Project description */
 .project-info p {
 
-  /* Gray text */
   color: #bdbdbd;
 
-  /* Better readability */
   line-height: 1.6;
 
 }
 
 
-/* Project link */
-.project-info a {
+/* Technology tags */
+.project-tech {
 
-  /* Red */
-  color: #ed1c2e;
+  display: flex;
 
-  /* Removes underline */
+  flex-wrap: wrap;
+
+  gap: 8px;
+
+  margin: 18px 0;
+
+}
+
+
+/* Individual technology tag */
+.project-tech span {
+
+  padding: 5px 9px;
+
+  color: #ffffff;
+
+  background: #222222;
+
+  border-left: 3px solid #ed1c2e;
+
+  font-size: 0.75rem;
+
+  font-weight: 900;
+
+}
+
+
+/* Project link container */
+.project-links {
+
+  display: flex;
+
+  flex-wrap: wrap;
+
+  gap: 14px;
+
+}
+
+
+/* Actual clickable project links */
+.project-links a {
+
+  display: inline-block;
+
+  color: #ffffff;
+
   text-decoration: none;
 
-  /* Bold */
+  font-size: 0.8rem;
+
   font-weight: 900;
+
+  padding: 10px 12px;
+
+  border: 2px solid #ffffff;
+
+  transition:
+    background 0.2s ease,
+    border-color 0.2s ease,
+    transform 0.2s ease;
+
+}
+
+
+/* Project link hover */
+.project-links a:hover {
+
+  background: #ed1c2e;
+
+  border-color: #ed1c2e;
+
+  transform: scale(1.05);
+
+}
+
+
+/* Label used for Cortana */
+.project-status {
+
+  display: inline-block;
+
+  padding: 10px 12px;
+
+  color: #ed1c2e;
+
+  border: 2px solid #ed1c2e;
+
+  font-size: 0.8rem;
+
+  font-weight: 900;
+
+}
+
+
+/* Disabled Coming Soon button */
+.disabled-project-link {
+
+  display: inline-block;
+
+  padding: 10px 12px;
+
+  color: #777777;
+
+  border: 2px solid #444444;
+
+  font-size: 0.8rem;
+
+  font-weight: 900;
+
+  cursor: not-allowed;
 
 }
 
 
 
 /* ========================================= */
-/* DEVELOPER GRAPHIC SECTION                 */
+/* DEVELOPER SECTION                         */
 /* ========================================= */
 
 
-/* Extra image section */
+/* Two-column learning section */
 .developer-section {
 
-  /* Two-column layout */
   display: grid;
 
-  /* Graphic and text */
   grid-template-columns: 1.1fr 0.9fr;
 
-  /* Centers content */
   align-items: center;
 
-  /* Adds space */
   gap: 55px;
 
-  /* Section spacing */
   padding: 80px 7%;
 
-  /* Dark red background glow */
   background:
     linear-gradient(
       120deg,
@@ -932,94 +1034,76 @@ body {
       #140507
     );
 
-  /* Divider */
   border-bottom: 2px solid #2b2b2b;
 
 }
 
 
-/* Graphic frame */
+/* Developer image frame */
 .developer-image-box {
 
-  /* Red border */
   border: 2px solid #ed1c2e;
 
-  /* White shadow */
   box-shadow: 12px 12px 0 #ffffff;
 
-  /* Prevents overflow */
   overflow: hidden;
 
-  /* Slight rotation */
   transform: rotate(1deg);
 
 }
 
 
-/* Graphic image */
+/* Developer image */
 .developer-image {
 
-  /* Responsive width */
   width: 100%;
 
-  /* Keeps proportions */
   height: auto;
 
-  /* Removes inline gap */
   display: block;
 
 }
 
 
-/* Small red label */
+/* ALWAYS LEARNING */
 .eyebrow {
 
-  /* Red */
   color: #ed1c2e;
 
-  /* Bold */
   font-weight: 900;
 
-  /* Letter spacing */
   letter-spacing: 3px;
 
 }
 
 
-/* Main text */
+/* BUILD LEARN REPEAT */
 .developer-text h2 {
 
-  /* Large */
   font-size: clamp(2.6rem, 5vw, 4.7rem);
 
-  /* Tight */
   line-height: 0.95;
 
-  /* Removes large default margin */
   margin: 12px 0 24px;
 
-  /* Bold */
   font-weight: 1000;
 
 }
 
 
-/* Red word */
+/* Makes LEARN red */
 .developer-text h2 span {
 
-  /* Red */
   color: #ed1c2e;
 
 }
 
 
-/* Paragraph */
+/* Developer paragraph */
 .developer-text > p:last-child {
 
-  /* Gray-white */
   color: #cccccc;
 
-  /* Readable spacing */
   line-height: 1.7;
 
 }
@@ -1031,94 +1115,74 @@ body {
 /* ========================================= */
 
 
-/* Contact description */
+/* Contact paragraph */
 .contact-description {
 
-  /* Limits width */
   max-width: 700px;
 
-  /* Gray-white */
   color: #cccccc;
 
-  /* Better line spacing */
   line-height: 1.7;
 
 }
 
 
-/* Contact cards container */
+/* Contact buttons */
 .contact-links {
 
-  /* Places cards beside each other */
   display: flex;
 
-  /* Allows wrapping */
   flex-wrap: wrap;
 
-  /* Space between */
   gap: 18px;
 
-  /* Space above */
   margin-top: 30px;
 
 }
 
 
-/* Individual contact card */
+/* GitHub and Email buttons */
 .contact-card {
 
-  /* Places icon and text side by side */
   display: flex;
 
-  /* Centers vertically */
   align-items: center;
 
-  /* Space between icon and text */
   gap: 12px;
 
-  /* Removes underline */
   text-decoration: none;
 
-  /* White */
   color: #ffffff;
 
-  /* Border */
   border: 2px solid #ffffff;
 
-  /* Click area */
   padding: 13px 22px;
 
-  /* Bold */
   font-weight: 900;
 
-  /* Smooth hover */
   transition:
     transform 0.2s ease,
     background 0.2s ease,
-    color 0.2s ease;
+    border-color 0.2s ease;
 
 }
 
 
-/* Contact hover */
+/* Contact button hover */
 .contact-card:hover {
 
-  /* Red background */
   background: #ed1c2e;
 
-  /* Red border */
   border-color: #ed1c2e;
 
-  /* Slight scale */
   transform: scale(1.06);
 
 }
 
 
-/* Contact icon image */
+/* GitHub icon */
 .contact-icon {
 
-  /* Small icon */
   width: 28px;
 
   height: 28px;
@@ -1128,13 +1192,11 @@ body {
 }
 
 
-/* Text icons for Email and LinkedIn */
+/* Email symbol */
 .contact-symbol {
 
-  /* Larger */
   font-size: 1.5rem;
 
-  /* Bold */
   font-weight: 900;
 
 }
@@ -1146,25 +1208,19 @@ body {
 /* ========================================= */
 
 
-/* Footer */
+/* Bottom of website */
 .site-footer {
 
-  /* Places text left/right */
   display: flex;
 
-  /* Pushes them apart */
   justify-content: space-between;
 
-  /* Adds spacing */
   padding: 24px 7%;
 
-  /* Dark background */
   background: #000000;
 
-  /* Gray text */
   color: #777777;
 
-  /* Smaller text */
   font-size: 0.8rem;
 
 }
@@ -1179,7 +1235,7 @@ body {
 @media (max-width: 950px) {
 
 
-  /* Header stacks */
+  /* Stack logo and navigation */
   .site-header {
 
     flex-direction: column;
@@ -1189,7 +1245,7 @@ body {
   }
 
 
-  /* Navigation wraps */
+  /* Allow navigation to wrap */
   .main-nav {
 
     flex-wrap: wrap;
@@ -1201,7 +1257,7 @@ body {
   }
 
 
-  /* Hero becomes one column */
+  /* Hero changes to one column */
   .hero-section {
 
     grid-template-columns: 1fr;
@@ -1209,7 +1265,7 @@ body {
   }
 
 
-  /* Centers hero text */
+  /* Adjust hero text spacing */
   .hero-content {
 
     padding: 60px 7%;
@@ -1217,7 +1273,7 @@ body {
   }
 
 
-  /* Gives hero image a set height */
+  /* Gives image visible height */
   .hero-image-area {
 
     min-height: 430px;
@@ -1225,7 +1281,7 @@ body {
   }
 
 
-  /* About stacks */
+  /* About becomes one column */
   .about-layout {
 
     grid-template-columns: 1fr;
@@ -1233,7 +1289,7 @@ body {
   }
 
 
-  /* Skills become 2 columns */
+  /* Skills become two columns */
   .skills-grid {
 
     grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -1249,7 +1305,7 @@ body {
   }
 
 
-  /* Developer section stacks */
+  /* Learning section becomes one column */
   .developer-section {
 
     grid-template-columns: 1fr;
@@ -1277,7 +1333,7 @@ body {
   }
 
 
-  /* Smaller nav text */
+  /* Smaller navigation text */
   .main-nav a {
 
     font-size: 0.78rem;
@@ -1287,7 +1343,7 @@ body {
   }
 
 
-  /* Smaller hover effect */
+  /* Smaller hover animation */
   .main-nav a:hover {
 
     transform: scale(1.06);
@@ -1295,7 +1351,7 @@ body {
   }
 
 
-  /* Reduces hero image height */
+  /* Smaller hero image */
   .hero-image-area {
 
     min-height: 300px;
@@ -1303,7 +1359,7 @@ body {
   }
 
 
-  /* Makes name slightly smaller */
+  /* Slightly reduces spacing in GERSON */
   .hero-name {
 
     letter-spacing: -3px;
@@ -1311,7 +1367,7 @@ body {
   }
 
 
-  /* Hero buttons stack */
+  /* Stack hero buttons */
   .hero-buttons {
 
     flex-direction: column;
@@ -1319,7 +1375,7 @@ body {
   }
 
 
-  /* Buttons become full-width-like */
+  /* Center button text */
   .button {
 
     text-align: center;
@@ -1327,7 +1383,7 @@ body {
   }
 
 
-  /* Skills become one column */
+  /* One skill per row */
   .skills-grid {
 
     grid-template-columns: 1fr;
@@ -1335,7 +1391,7 @@ body {
   }
 
 
-  /* Smaller spacing */
+  /* Reduce page padding */
   .page-section,
   .developer-section {
 
@@ -1344,7 +1400,7 @@ body {
   }
 
 
-  /* Contact cards stack */
+  /* Contact buttons stack */
   .contact-links {
 
     flex-direction: column;
@@ -1352,7 +1408,7 @@ body {
   }
 
 
-  /* Makes cards easy to tap */
+  /* Center contact buttons */
   .contact-card {
 
     justify-content: center;
