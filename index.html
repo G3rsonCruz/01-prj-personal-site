@@ -1,16 +1,15 @@
 <!DOCTYPE html>
-
 <html lang="en">
 
 <head>
 
-  <!-- Lets the browser know this webpage uses UTF-8 characters -->
+  <!-- Lets the browser correctly read letters, numbers, and symbols -->
   <meta charset="UTF-8">
 
-  <!-- Makes the website resize properly on phones and tablets -->
+  <!-- Makes the page resize correctly on phones and tablets -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- Text that appears on the browser tab -->
+  <!-- Text shown in the browser tab -->
   <title>Gerson | Web Development Portfolio</title>
 
   <!-- Connects this HTML file to the CSS file -->
@@ -28,44 +27,32 @@
 
   <header class="site-header">
 
-    <!-- Logo / website name -->
-    <a class="logo" href="#home">
+    <!-- Logo image -->
+    <a href="#home" class="logo-link">
 
-      <!-- Red angled bracket -->
-      <span>&lt;</span>
-
-      GERSON
-
-      <!-- Red angled bracket -->
-      <span>&gt;</span>
+      <!-- Loads the logo from the images folder -->
+      <img
+        src="images/logo.png"
+        alt="Gerson logo"
+        class="site-logo"
+      >
 
     </a>
 
 
     <!-- Main navigation -->
-    <nav class="main-nav">
+    <nav class="main-nav" aria-label="Main navigation">
 
       <!-- Each link jumps to a section on the page -->
+      <a href="#home">HOME</a>
 
-      <a href="#home">
-        HOME
-      </a>
+      <a href="#about">ABOUT</a>
 
-      <a href="#about">
-        ABOUT
-      </a>
+      <a href="#skills">SKILLS</a>
 
-      <a href="#skills">
-        SKILLS
-      </a>
+      <a href="#projects">PROJECTS</a>
 
-      <a href="#projects">
-        PROJECTS
-      </a>
-
-      <a href="#contact">
-        CONTACT
-      </a>
+      <a href="#contact">CONTACT</a>
 
     </nav>
 
@@ -74,76 +61,66 @@
 
 
   <!-- ========================================= -->
-  <!-- HERO / HOME SECTION                       -->
+  <!-- MAIN CONTENT                              -->
   <!-- ========================================= -->
 
   <main>
 
 
+    <!-- ======================================= -->
+    <!-- HERO / HOME SECTION                     -->
+    <!-- ======================================= -->
+
     <section id="home" class="hero-section">
 
 
-      <!-- LEFT SIDE OF HERO -->
-
+      <!-- Left side of the hero -->
       <div class="hero-content">
 
-        <!-- Small introduction -->
+        <!-- Small introduction text -->
         <p class="hero-small-text">
-
           Hello, I'm
-
         </p>
 
 
-        <!-- Main name -->
+        <!-- Main first name -->
         <h1 class="hero-name">
-
           GERSON
-
         </h1>
 
 
-        <!-- Last name displayed like a white sticker -->
+        <!-- Last name styled like a paper sticker -->
         <div class="name-sticker">
-
           CRUZ-CARCAMO
-
         </div>
 
 
-        <!-- Job / student title -->
+        <!-- Short title -->
         <p class="hero-title">
-
           Aspiring Developer
-
         </p>
 
 
-        <!-- Short description -->
+        <!-- Short introduction -->
         <p class="hero-description">
-
-          I build clean, responsive websites and enjoy
-          turning ideas into real projects through code.
-
+          I'm a Computer Science student building clean,
+          responsive websites and learning how to turn ideas
+          into real projects through code.
         </p>
 
 
-        <!-- Buttons -->
+        <!-- Hero buttons -->
         <div class="hero-buttons">
 
-          <!-- Goes to projects -->
+          <!-- Jumps to Projects -->
           <a href="#projects" class="button red-button">
-
             VIEW PROJECTS
-
           </a>
 
 
-          <!-- Goes to contact -->
+          <!-- Jumps to Contact -->
           <a href="#contact" class="button outline-button">
-
             CONTACT ME
-
           </a>
 
         </div>
@@ -152,42 +129,15 @@
 
 
 
-      <!-- RIGHT SIDE OF HERO -->
+      <!-- Right side of the hero -->
+      <div class="hero-image-area">
 
-      <div class="hero-visual">
-
-
-        <!-- Large background shape -->
-        <div class="visual-background"></div>
-
-
-        <!-- Decorative red silhouette -->
-        <div class="character character-one"></div>
-
-        <!-- Decorative red silhouette -->
-        <div class="character character-two"></div>
-
-        <!-- Decorative red silhouette -->
-        <div class="character character-three"></div>
-
-
-        <!-- Decorative red lines -->
-        <div class="red-line line-one"></div>
-
-        <div class="red-line line-two"></div>
-
-        <div class="red-line line-three"></div>
-
-
-        <!-- Small decorative sign -->
-        <div class="visual-sign">
-
-          BUILD<br>
-          THE<br>
-          GAME
-
-        </div>
-
+        <!-- Main hero background artwork -->
+        <img
+          src="images/hero-bg.png"
+          alt="Stylized black and red subway scene"
+          class="hero-image"
+        >
 
       </div>
 
@@ -196,26 +146,28 @@
 
 
 
-    <!-- ========================================= -->
-    <!-- ABOUT SECTION                             -->
-    <!-- ========================================= -->
+    <!-- ======================================= -->
+    <!-- ABOUT SECTION                           -->
+    <!-- ======================================= -->
 
     <section id="about" class="page-section about-section">
 
 
-      <!-- Section title -->
-      <h2 class="section-title">
+      <!-- Section heading -->
+      <div class="section-heading">
 
-        ABOUT
+        <h2>
+          ABOUT <span>ME</span>
+        </h2>
 
-        <span>
-          ME
-        </span>
+        <!-- Red underline is created using CSS -->
+        <div class="heading-underline"></div>
 
-      </h2>
-
+      </div>
 
 
+
+      <!-- About section content -->
       <div class="about-layout">
 
 
@@ -223,50 +175,37 @@
         <div class="about-text">
 
           <p>
-
             I'm a Computer Science student who enjoys
-            web development, programming, and building
-            projects that let me learn new skills.
-
+            programming, web development, and building
+            projects that help me improve my skills.
           </p>
 
 
           <p>
-
-            This portfolio will grow throughout my
-            web development course as I complete new
-            assignments and create new projects.
-
+            This portfolio will continue to grow as I complete
+            more projects in my web development course and
+            experiment with new technologies.
           </p>
 
 
           <p>
-
-            I enjoy bold designs, interactive websites,
-            and learning how small pieces of code can
-            come together to create something useful.
-
+            I especially enjoy bold visual design, responsive
+            layouts, and creating websites that feel more
+            interactive than a basic static page.
           </p>
 
         </div>
 
 
 
-        <!-- Decorative graphic -->
-        <div class="about-graphic">
+        <!-- About image -->
+        <div class="about-image-box">
 
-          <!-- Main red circle -->
-          <div class="red-circle"></div>
-
-          <!-- Fake black silhouette -->
-          <div class="about-character"></div>
-
-          <!-- Decorative star -->
-          <div class="star">
-
-            ★
-
-          </div>
+          <img
+            src="images/about-character.png"
+            alt="Stylized developer working at a computer"
+            class="about-image"
+          >
 
         </div>
 
@@ -278,126 +217,141 @@
 
 
 
-    <!-- ========================================= -->
-    <!-- SKILLS SECTION                            -->
-    <!-- ========================================= -->
+    <!-- ======================================= -->
+    <!-- SKILLS SECTION                          -->
+    <!-- ======================================= -->
 
     <section id="skills" class="page-section skills-section">
 
 
-      <!-- Section title -->
-      <h2 class="section-title">
+      <!-- Section heading -->
+      <div class="section-heading">
 
-        <span>
-          S
-        </span>
+        <h2>
+          <span>S</span>KILLS
+        </h2>
 
-        KILLS
+        <div class="heading-underline"></div>
 
-      </h2>
+      </div>
 
 
-      <!-- Container holding skill cards -->
+
+      <!-- Skills cards -->
       <div class="skills-grid">
 
 
-        <!-- HTML -->
-        <div class="skill-card">
+        <!-- HTML CARD -->
+        <article class="skill-card">
 
-          <div class="skill-icon">
+          <img
+            src="images/html-icon.png"
+            alt="HTML logo"
+            class="skill-icon"
+          >
 
-            HTML
-
-          </div>
-
-          <h3>
-
-            HTML
-
-          </h3>
+          <h3>HTML</h3>
 
           <p>
-
-            Building the structure of webpages.
-
+            Building the structure and content of webpages.
           </p>
 
-        </div>
+        </article>
 
 
 
-        <!-- CSS -->
-        <div class="skill-card">
+        <!-- CSS CARD -->
+        <article class="skill-card">
 
-          <div class="skill-icon">
+          <img
+            src="images/css-icon.png"
+            alt="CSS logo"
+            class="skill-icon"
+          >
 
-            CSS
-
-          </div>
-
-          <h3>
-
-            CSS
-
-          </h3>
+          <h3>CSS</h3>
 
           <p>
-
-            Styling layouts and responsive designs.
-
+            Styling layouts, colors, spacing, and responsive designs.
           </p>
 
-        </div>
+        </article>
 
 
 
-        <!-- Java -->
-        <div class="skill-card">
+        <!-- JAVA CARD -->
+        <article class="skill-card">
 
-          <div class="skill-icon">
+          <img
+            src="images/java-icon.png"
+            alt="Java logo"
+            class="skill-icon"
+          >
 
-            JAVA
-
-          </div>
-
-          <h3>
-
-            Java
-
-          </h3>
+          <h3>Java</h3>
 
           <p>
-
-            Object-oriented programming and problem solving.
-
+            Object-oriented programming, algorithms, and data structures.
           </p>
 
-        </div>
+        </article>
 
 
 
-        <!-- Python -->
-        <div class="skill-card">
+        <!-- PYTHON CARD -->
+        <article class="skill-card">
 
-          <div class="skill-icon">
+          <img
+            src="images/python-icon.png"
+            alt="Python logo"
+            class="skill-icon"
+          >
 
-            PY
-
-          </div>
-
-          <h3>
-
-            Python
-
-          </h3>
+          <h3>Python</h3>
 
           <p>
-
-            Programming, tools, and personal projects.
-
+            Programming, automation, and personal development projects.
           </p>
 
-        </div>
+        </article>
+
+
+
+        <!-- GIT CARD -->
+        <article class="skill-card">
+
+          <img
+            src="images/git-icon.png"
+            alt="Git logo"
+            class="skill-icon"
+          >
+
+          <h3>Git</h3>
+
+          <p>
+            Tracking changes and managing project versions.
+          </p>
+
+        </article>
+
+
+
+        <!-- GITHUB CARD -->
+        <article class="skill-card">
+
+          <img
+            src="images/github-icon.png"
+            alt="GitHub logo"
+            class="skill-icon"
+          >
+
+          <h3>GitHub</h3>
+
+          <p>
+            Storing projects and sharing code online.
+          </p>
+
+        </article>
 
 
       </div>
@@ -407,67 +361,53 @@
 
 
 
-    <!-- ========================================= -->
-    <!-- PROJECTS SECTION                          -->
-    <!-- ========================================= -->
+    <!-- ======================================= -->
+    <!-- PROJECTS SECTION                        -->
+    <!-- ======================================= -->
 
     <section id="projects" class="page-section projects-section">
 
 
       <!-- Section heading -->
-      <div class="projects-heading">
+      <div class="section-heading">
 
-        <h2 class="section-title">
-
+        <h2>
           PROJECTS
-
         </h2>
 
-
-        <!-- Decorative button -->
-        <a href="#projects" class="small-button">
-
-          VIEW ALL PROJECTS
-
-        </a>
+        <div class="heading-underline"></div>
 
       </div>
 
 
 
-      <!-- Project cards -->
+      <!-- Projects grid -->
       <div class="projects-grid">
 
 
         <!-- PROJECT 1 -->
-
         <article class="project-card">
 
-          <div class="project-image">
+          <!-- Temporary visual area -->
+          <div class="project-preview project-preview-one">
 
-            PROJECT 01
+            <span>01</span>
 
           </div>
+
 
           <div class="project-info">
 
             <h3>
-
               Project One
-
             </h3>
 
             <p>
-
-              Your first web development class project
-              will be displayed here.
-
+              Your first web development course project will go here.
             </p>
 
             <a href="#">
-
               VIEW PROJECT →
-
             </a>
 
           </div>
@@ -477,34 +417,27 @@
 
 
         <!-- PROJECT 2 -->
-
         <article class="project-card">
 
-          <div class="project-image">
+          <div class="project-preview project-preview-two">
 
-            PROJECT 02
+            <span>02</span>
 
           </div>
+
 
           <div class="project-info">
 
             <h3>
-
               Project Two
-
             </h3>
 
             <p>
-
-              Add your second class assignment here
-              when it is completed.
-
+              Add your second class project once it is completed.
             </p>
 
             <a href="#">
-
               VIEW PROJECT →
-
             </a>
 
           </div>
@@ -514,34 +447,27 @@
 
 
         <!-- PROJECT 3 -->
-
         <article class="project-card">
 
-          <div class="project-image">
+          <div class="project-preview project-preview-three">
 
-            PROJECT 03
+            <span>03</span>
 
           </div>
+
 
           <div class="project-info">
 
             <h3>
-
               Project Three
-
             </h3>
 
             <p>
-
-              Use this card for another project,
-              experiment, or assignment.
-
+              Use this card for another assignment or personal project.
             </p>
 
             <a href="#">
-
               VIEW PROJECT →
-
             </a>
 
           </div>
@@ -556,58 +482,128 @@
 
 
 
-    <!-- ========================================= -->
-    <!-- CONTACT SECTION                           -->
-    <!-- ========================================= -->
+    <!-- ======================================= -->
+    <!-- DEVELOPER GRAPHIC SECTION                -->
+    <!-- ======================================= -->
+
+    <section class="developer-section">
+
+
+      <!-- Extra visual that helps break up the page -->
+      <div class="developer-image-box">
+
+        <img
+          src="images/developer-graphic.png"
+          alt="Developer working on a laptop"
+          class="developer-image"
+        >
+
+      </div>
+
+
+
+      <!-- Text beside the graphic -->
+      <div class="developer-text">
+
+        <p class="eyebrow">
+          ALWAYS LEARNING
+        </p>
+
+
+        <h2>
+          BUILD.
+          <span>LEARN.</span>
+          REPEAT.
+        </h2>
+
+
+        <p>
+          This portfolio is not just a place to show finished work.
+          It also represents the progress I make as I continue
+          learning software development.
+        </p>
+
+      </div>
+
+
+    </section>
+
+
+
+    <!-- ======================================= -->
+    <!-- CONTACT SECTION                         -->
+    <!-- ======================================= -->
 
     <section id="contact" class="page-section contact-section">
 
 
-      <!-- Section title -->
-      <h2 class="section-title">
+      <!-- Heading -->
+      <div class="section-heading">
 
-        CONTACT
+        <h2>
+          CONTACT <span>ME</span>
+        </h2>
 
-        <span>
-          ME
-        </span>
+        <div class="heading-underline"></div>
 
-      </h2>
+      </div>
 
 
-      <!-- Contact description -->
+
+      <!-- Contact text -->
       <p class="contact-description">
-
-        Want to connect or see more of my work?
-        You can add your real links below.
-
+        Want to connect, see more of my work, or ask about a project?
+        You can reach me using the links below.
       </p>
 
 
-      <!-- Contact buttons -->
+
+      <!-- Contact links -->
       <div class="contact-links">
 
 
-        <!-- GitHub link -->
-        <a href="#">
+        <!-- GitHub -->
+        <a href="#" class="contact-card">
 
-          GITHUB
+          <img
+            src="images/github-icon.png"
+            alt=""
+            class="contact-icon"
+          >
+
+          <span>
+            GITHUB
+          </span>
 
         </a>
 
 
-        <!-- Email link -->
-        <a href="mailto:youremail@example.com">
 
-          EMAIL
+        <!-- Email -->
+        <a href="mailto:youremail@example.com" class="contact-card">
+
+          <span class="contact-symbol">
+            ✉
+          </span>
+
+          <span>
+            EMAIL
+          </span>
 
         </a>
 
 
-        <!-- LinkedIn link -->
-        <a href="#">
 
-          LINKEDIN
+        <!-- LinkedIn placeholder -->
+        <a href="#" class="contact-card">
+
+          <span class="contact-symbol">
+            in
+          </span>
+
+          <span>
+            LINKEDIN
+          </span>
 
         </a>
 
@@ -628,20 +624,13 @@
 
   <footer class="site-footer">
 
-
     <p>
-
       © 2026 Gerson Cruz-Carcamo
-
     </p>
-
 
     <p>
-
       Built with HTML + CSS
-
     </p>
-
 
   </footer>
 
