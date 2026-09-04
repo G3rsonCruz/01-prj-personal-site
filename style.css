@@ -1,18 +1,18 @@
 /* ========================================= */
-/* BASIC SETUP                               */
+/* BASIC RESET                               */
 /* ========================================= */
 
 
-/* Applies these settings to every element */
+/* Applies box-sizing to every element */
 * {
 
-  /* Makes width and height easier to control */
+  /* Includes padding and border inside width/height */
   box-sizing: border-box;
 
 }
 
 
-/* Controls the entire webpage */
+/* Controls the whole HTML page */
 html {
 
   /* Makes navigation links scroll smoothly */
@@ -21,25 +21,26 @@ html {
 }
 
 
-/* Main body settings */
+/* Main page body */
 body {
 
-  /* Removes default browser spacing */
+  /* Removes the browser's default spacing */
   margin: 0;
 
-  /* Sets the main font */
+  /* Main font */
   font-family: Arial, Helvetica, sans-serif;
 
-  /* Makes text white by default */
-  color: white;
+  /* Main text color */
+  color: #ffffff;
 
-  /* Sets the background color */
+  /* Dark background */
   background: #050505;
 
-  /* Prevents horizontal scrolling */
+  /* Prevents accidental horizontal scrolling */
   overflow-x: hidden;
 
 }
+
 
 
 /* ========================================= */
@@ -47,62 +48,59 @@ body {
 /* ========================================= */
 
 
-/* Main header */
+/* Top navigation bar */
 .site-header {
 
-  /* Keeps navigation visible while scrolling */
+  /* Keeps the navigation visible while scrolling */
   position: sticky;
 
-  /* Keeps it at the top */
+  /* Sticks to top of screen */
   top: 0;
 
-  /* Makes sure it appears above everything else */
+  /* Keeps header above the rest of the page */
   z-index: 1000;
 
-  /* Places logo and links side by side */
+  /* Places logo and navigation side by side */
   display: flex;
 
-  /* Centers everything vertically */
+  /* Vertically centers them */
   align-items: center;
 
-  /* Pushes logo left and menu right */
+  /* Pushes logo left and nav right */
   justify-content: space-between;
 
-  /* Adds space inside the header */
-  padding: 20px 5%;
+  /* Adds spacing inside header */
+  padding: 12px 5%;
 
-  /* Black background */
-  background: rgba(0, 0, 0, 0.95);
+  /* Almost-solid black background */
+  background: rgba(0, 0, 0, 0.96);
 
-  /* Thin line underneath */
-  border-bottom: 1px solid #1e1e1e;
+  /* Adds a subtle divider */
+  border-bottom: 1px solid #242424;
 
 }
 
 
-/* Logo */
-.logo {
-
-  /* Makes text white */
-  color: white;
+/* Link containing the logo */
+.logo-link {
 
   /* Removes underline */
   text-decoration: none;
 
-  /* Makes logo larger */
-  font-size: 1.4rem;
-
-  /* Makes logo bold */
-  font-weight: 900;
-
 }
 
 
-/* Red brackets around logo */
-.logo span {
+/* Logo image */
+.site-logo {
 
-  /* Persona-inspired red */
-  color: #ed1c2e;
+  /* Controls logo width */
+  width: 180px;
+
+  /* Keeps image proportions correct */
+  height: auto;
+
+  /* Removes unwanted inline-image spacing */
+  display: block;
 
 }
 
@@ -110,11 +108,11 @@ body {
 /* Navigation container */
 .main-nav {
 
-  /* Places links next to each other */
+  /* Places links beside each other */
   display: flex;
 
-  /* Adds space between links */
-  gap: 35px;
+  /* Space between links */
+  gap: 24px;
 
 }
 
@@ -122,22 +120,22 @@ body {
 /* Navigation links */
 .main-nav a {
 
-  /* Needed for animations */
+  /* Allows transform animations */
   display: inline-block;
 
   /* Removes underline */
   text-decoration: none;
 
-  /* White text */
-  color: white;
+  /* Makes text white */
+  color: #ffffff;
 
-  /* Bold text */
+  /* Makes text bold */
   font-weight: 900;
 
-  /* Adds space */
-  padding: 10px 14px;
+  /* Gives links clickable space */
+  padding: 12px 16px;
 
-  /* Makes animation smooth */
+  /* Smooth hover animation */
   transition:
     transform 0.2s ease,
     background 0.2s ease,
@@ -146,16 +144,17 @@ body {
 }
 
 
-/* Navigation hover animation */
+/* Navigation hover */
 .main-nav a:hover {
 
-  /* Makes background red */
+  /* Red background */
   background: #ed1c2e;
 
-  /* Makes the navigation option larger */
-  transform: scale(1.18) rotate(-2deg);
+  /* Makes link bigger and slightly angled */
+  transform: scale(1.14) rotate(-2deg);
 
 }
+
 
 
 /* ========================================= */
@@ -166,41 +165,49 @@ body {
 /* Main hero section */
 .hero-section {
 
-  /* Makes hero at least most of the screen */
+  /* Makes hero large */
   min-height: 680px;
 
   /* Creates two columns */
   display: grid;
 
-  /* Left side slightly smaller than right */
-  grid-template-columns: 45% 55%;
+  /* Left text + right image */
+  grid-template-columns: 43% 57%;
 
   /* Centers content vertically */
-  align-items: center;
+  align-items: stretch;
 
-  /* Adds side spacing */
-  padding-left: 6%;
-
-  /* Keeps shapes inside hero */
+  /* Keeps graphic edges clean */
   overflow: hidden;
 
-  /* Needed for decorative items */
-  position: relative;
+  /* Dark background */
+  background: #050505;
 
-  /* Adds bottom border */
-  border-bottom: 2px solid #444;
+  /* Divider underneath */
+  border-bottom: 2px solid #333333;
 
 }
 
 
-/* Hero content */
+/* Left hero content */
 .hero-content {
 
-  /* Makes sure text stays above graphics */
-  z-index: 10;
+  /* Centers text vertically */
+  display: flex;
 
-  /* Adds right spacing */
-  padding-right: 30px;
+  /* Stacks items vertically */
+  flex-direction: column;
+
+  /* Centers vertically */
+  justify-content: center;
+
+  /* Adds spacing around text */
+  padding: 70px 5% 70px 8%;
+
+  /* Keeps content above other things */
+  position: relative;
+
+  z-index: 2;
 
 }
 
@@ -208,68 +215,72 @@ body {
 /* "Hello, I'm" text */
 .hero-small-text {
 
-  /* Adds spacing */
-  margin-bottom: 10px;
+  /* Removes excess spacing */
+  margin: 0 0 10px;
 
-  /* Makes text slightly larger */
-  font-size: 1.1rem;
-
-  /* Gives letter spacing */
+  /* Letter spacing */
   letter-spacing: 2px;
+
+  /* Slightly larger font */
+  font-size: 1.05rem;
 
 }
 
 
-/* Main GERSON text */
+/* Main first name */
 .hero-name {
 
-  /* Removes default spacing */
+  /* Removes default heading margin */
   margin: 0;
 
-  /* Very large text */
-  font-size: clamp(4rem, 8vw, 7rem);
+  /* Large responsive size */
+  font-size: clamp(4rem, 7vw, 7rem);
 
   /* Very bold */
   font-weight: 1000;
 
-  /* Makes letters close together */
+  /* Tight letters */
   letter-spacing: -5px;
 
-  /* Adds shadow */
-  text-shadow: 8px 8px 0 #202020;
+  /* Tight line height */
+  line-height: 0.9;
+
+  /* Adds depth */
+  text-shadow:
+    6px 6px 0 #202020;
 
 }
 
 
-/* White last-name sticker */
+/* Last-name sticker */
 .name-sticker {
 
-  /* Makes box fit text */
-  display: inline-block;
+  /* Makes box only as wide as text */
+  width: fit-content;
 
   /* White background */
-  background: white;
+  background: #ffffff;
 
   /* Black text */
-  color: black;
+  color: #111111;
 
   /* Makes text bold */
   font-weight: 1000;
 
-  /* Adds spacing around text */
+  /* Responsive size */
+  font-size: clamp(1.3rem, 2.3vw, 2rem);
+
+  /* Adds space around text */
   padding: 5px 14px;
 
-  /* Larger font */
-  font-size: clamp(1.4rem, 3vw, 2.2rem);
-
-  /* Slight rotation */
+  /* Slight tilt */
   transform: rotate(-2deg);
 
-  /* Adds shadow */
+  /* Adds red shadow */
   box-shadow: 7px 7px 0 #ed1c2e;
 
-  /* Adds spacing below */
-  margin-bottom: 25px;
+  /* Space below */
+  margin: 8px 0 26px;
 
 }
 
@@ -277,50 +288,50 @@ body {
 /* Developer title */
 .hero-title {
 
-  /* Red text */
+  /* Red accent color */
   color: #ed1c2e;
 
-  /* Larger font */
+  /* Larger text */
   font-size: 1.2rem;
 
   /* Bold */
   font-weight: 900;
 
+  /* Small spacing */
+  margin-bottom: 12px;
+
 }
 
 
-/* Hero paragraph */
+/* Main hero description */
 .hero-description {
 
-  /* Limits line width */
-  max-width: 500px;
+  /* Limits width for easier reading */
+  max-width: 520px;
 
-  /* Slightly gray text */
-  color: #dddddd;
+  /* Slight gray color */
+  color: #d2d2d2;
 
-  /* Easier to read */
+  /* Adds vertical breathing room */
   line-height: 1.7;
-
-  /* Larger text */
-  font-size: 1rem;
 
 }
 
 
-/* Button container */
+/* Buttons container */
 .hero-buttons {
 
   /* Places buttons beside each other */
   display: flex;
 
-  /* Allows wrapping on small screens */
+  /* Allows wrapping */
   flex-wrap: wrap;
 
-  /* Space between buttons */
-  gap: 20px;
+  /* Adds space between buttons */
+  gap: 16px;
 
-  /* Adds space above buttons */
-  margin-top: 30px;
+  /* Adds space above */
+  margin-top: 28px;
 
 }
 
@@ -334,10 +345,10 @@ body {
   /* Bold text */
   font-weight: 900;
 
-  /* Adds spacing */
-  padding: 15px 26px;
+  /* Adds click area */
+  padding: 14px 24px;
 
-  /* Smooth animation */
+  /* Smooth hover */
   transition: transform 0.2s ease;
 
 }
@@ -356,7 +367,7 @@ body {
 .red-button {
 
   /* White text */
-  color: white;
+  color: #ffffff;
 
   /* Red background */
   background: #ed1c2e;
@@ -367,304 +378,128 @@ body {
 }
 
 
-/* White outline button */
+/* Outline button */
 .outline-button {
 
   /* White text */
-  color: white;
+  color: #ffffff;
 
   /* Transparent background */
   background: transparent;
 
   /* White border */
-  border: 2px solid white;
+  border: 2px solid #ffffff;
 
 }
 
 
-/* ========================================= */
-/* HERO VISUAL                               */
-/* ========================================= */
+/* Right side of hero */
+.hero-image-area {
 
-
-/* Right side visual area */
-.hero-visual {
-
-  /* Makes graphic fill available space */
-  width: 100%;
-
-  /* Sets height */
-  height: 100%;
-
-  /* Needed for shapes */
+  /* Makes the image fill its half */
   position: relative;
 
-  /* Dark background */
-  background:
-    linear-gradient(
-      135deg,
-      #171717,
-      #090909 55%,
-      #161616
-    );
-
-  /* Angled left edge */
-  clip-path: polygon(
-    14% 0,
-    100% 0,
-    100% 100%,
-    0 100%
-  );
+  /* Prevents image overflow */
+  overflow: hidden;
 
 }
 
 
-/* Background graphic */
-.visual-background {
+/* Hero image */
+.hero-image {
 
-  /* Covers entire visual */
-  position: absolute;
+  /* Makes image fill container width */
+  width: 100%;
 
-  /* Stretches to all sides */
-  inset: 0;
+  /* Makes image fill container height */
+  height: 100%;
 
-  /* Creates dark perspective lines */
-  background:
-    repeating-linear-gradient(
-      90deg,
-      transparent 0,
-      transparent 90px,
-      rgba(255,255,255,0.06) 92px
-    );
+  /* Crops image instead of stretching it */
+  object-fit: cover;
 
-}
+  /* Focuses crop toward center */
+  object-position: center;
 
-
-/* Decorative red floor stripe */
-.hero-visual::after {
-
-  /* Required for pseudo-element */
-  content: "";
-
-  /* Positions it */
-  position: absolute;
-
-  /* Places it near the bottom */
-  bottom: 90px;
-
-  /* Starts from left */
-  left: 5%;
-
-  /* Wide line */
-  width: 120%;
-
-  /* Line height */
-  height: 18px;
-
-  /* Red color */
-  background: #ed1c2e;
-
-  /* Angles the line */
-  transform: rotate(-14deg);
+  /* Makes it behave like a block */
+  display: block;
 
 }
 
-
-/* Shared character style */
-.character {
-
-  /* Positions characters freely */
-  position: absolute;
-
-  /* Red body */
-  background: #ed1c2e;
-
-  /* Creates rounded head/body */
-  border-radius: 50% 50% 25% 25%;
-
-  /* Shadow */
-  box-shadow: 10px 12px 0 rgba(0, 0, 0, 0.7);
-
-}
-
-
-/* First character */
-.character-one {
-
-  /* Width */
-  width: 95px;
-
-  /* Height */
-  height: 230px;
-
-  /* Position */
-  left: 32%;
-
-  /* Position */
-  bottom: 20px;
-
-  /* Rotation */
-  transform: rotate(-12deg);
-
-}
-
-
-/* Second character */
-.character-two {
-
-  width: 110px;
-
-  height: 290px;
-
-  right: 20%;
-
-  bottom: 0;
-
-  transform: rotate(4deg);
-
-}
-
-
-/* Third character */
-.character-three {
-
-  width: 75px;
-
-  height: 190px;
-
-  right: 6%;
-
-  bottom: 110px;
-
-  transform: rotate(12deg);
-
-}
-
-
-/* Decorative lines */
-.red-line {
-
-  position: absolute;
-
-  height: 5px;
-
-  background: #ed1c2e;
-
-  transform-origin: left center;
-
-}
-
-
-/* First line */
-.line-one {
-
-  width: 230px;
-
-  top: 35%;
-
-  left: 28%;
-
-  transform: rotate(17deg);
-
-}
-
-
-/* Second line */
-.line-two {
-
-  width: 280px;
-
-  top: 52%;
-
-  left: 43%;
-
-  transform: rotate(-8deg);
-
-}
-
-
-/* Third line */
-.line-three {
-
-  width: 200px;
-
-  bottom: 28%;
-
-  left: 12%;
-
-  transform: rotate(8deg);
-
-}
-
-
-/* Small sign */
-.visual-sign {
-
-  position: absolute;
-
-  top: 70px;
-
-  right: 12%;
-
-  color: white;
-
-  background: #ed1c2e;
-
-  padding: 12px;
-
-  font-weight: 900;
-
-  text-align: center;
-
-  transform: rotate(-5deg);
-
-  box-shadow: 7px 7px 0 black;
-
-}
 
 
 /* ========================================= */
-/* SHARED SECTION DESIGN                     */
+/* GENERAL SECTION STYLES                    */
 /* ========================================= */
 
 
-/* Shared settings for each main section */
+/* Shared settings for major sections */
 .page-section {
 
-  /* Adds large spacing */
+  /* Adds vertical and horizontal spacing */
   padding: 80px 7%;
 
-  /* Adds divider line */
-  border-bottom: 2px solid #333;
+  /* Adds divider */
+  border-bottom: 2px solid #2b2b2b;
 
 }
 
 
-/* Section title */
-.section-title {
+/* Heading wrapper */
+.section-heading {
 
-  /* Removes top margin */
-  margin-top: 0;
+  /* Adds space below heading */
+  margin-bottom: 35px;
 
-  /* Large font */
-  font-size: clamp(2.8rem, 6vw, 4.5rem);
+}
 
-  /* Very bold */
+
+/* Main section headings */
+.section-heading h2 {
+
+  /* Removes default margin */
+  margin: 0;
+
+  /* Large responsive size */
+  font-size: clamp(2.8rem, 5vw, 4.7rem);
+
+  /* Bold */
   font-weight: 1000;
 
-  /* Tight letters */
+  /* Tight spacing */
   letter-spacing: -4px;
 
 }
 
 
-/* Red part of titles */
-.section-title span {
+/* Red accent text */
+.section-heading h2 span {
 
-  /* Red color */
+  /* Persona-like red */
   color: #ed1c2e;
 
 }
+
+
+/* Red underline below headings */
+.heading-underline {
+
+  /* Underline width */
+  width: 180px;
+
+  /* Underline thickness */
+  height: 7px;
+
+  /* Red color */
+  background: #ed1c2e;
+
+  /* Adds top space */
+  margin-top: 8px;
+
+  /* Makes line slightly angled */
+  transform: skewX(-25deg) rotate(-1deg);
+
+}
+
 
 
 /* ========================================= */
@@ -672,16 +507,30 @@ body {
 /* ========================================= */
 
 
-/* About layout */
+/* About section background */
+.about-section {
+
+  /* Adds subtle angled red glow */
+  background:
+    linear-gradient(
+      120deg,
+      rgba(237, 28, 46, 0.06),
+      transparent 45%
+    );
+
+}
+
+
+/* About content layout */
 .about-layout {
 
   /* Creates two columns */
   display: grid;
 
-  /* Text and image columns */
-  grid-template-columns: 1fr 1fr;
+  /* Text and image */
+  grid-template-columns: 1fr 1.05fr;
 
-  /* Space between columns */
+  /* Space between them */
   gap: 50px;
 
   /* Centers vertically */
@@ -693,10 +542,10 @@ body {
 /* About paragraphs */
 .about-text p {
 
-  /* Gray text */
-  color: #dddddd;
+  /* Gray-white text */
+  color: #d5d5d5;
 
-  /* Better spacing */
+  /* Easier reading */
   line-height: 1.8;
 
   /* Slightly larger */
@@ -705,79 +554,38 @@ body {
 }
 
 
-/* Graphic area */
-.about-graphic {
+/* Image box */
+.about-image-box {
 
-  /* Adds height */
-  min-height: 300px;
+  /* Creates a frame */
+  border: 2px solid #ffffff;
 
-  /* Needed for decorative shapes */
-  position: relative;
+  /* Red shadow */
+  box-shadow: 12px 12px 0 #ed1c2e;
 
-}
+  /* Prevents image from overflowing */
+  overflow: hidden;
 
-
-/* Large red circle */
-.red-circle {
-
-  position: absolute;
-
-  width: 260px;
-
-  height: 260px;
-
-  border-radius: 50%;
-
-  background: #ed1c2e;
-
-  left: 25%;
-
-  top: 10px;
+  /* Slight angle */
+  transform: rotate(-1deg);
 
 }
 
 
-/* Fake black character */
-.about-character {
+/* About image */
+.about-image {
 
-  position: absolute;
+  /* Fills width */
+  width: 100%;
 
-  width: 140px;
+  /* Makes image responsive */
+  height: auto;
 
-  height: 260px;
-
-  background: #050505;
-
-  left: 40%;
-
-  top: 40px;
-
-  transform: rotate(10deg);
-
-  border-radius: 50% 50% 10% 10%;
+  /* Removes inline spacing */
+  display: block;
 
 }
 
-
-/* Decorative star */
-.star {
-
-  position: absolute;
-
-  right: 15%;
-
-  top: 20px;
-
-  font-size: 5rem;
-
-  color: white;
-
-  transform: rotate(15deg);
-
-  text-shadow:
-    5px 5px 0 #ed1c2e;
-
-}
 
 
 /* ========================================= */
@@ -785,14 +593,16 @@ body {
 /* ========================================= */
 
 
-/* Grid containing skill boxes */
+/* Skills grid */
 .skills-grid {
 
+  /* Uses CSS Grid */
   display: grid;
 
-  grid-template-columns:
-    repeat(4, 1fr);
+  /* Creates three columns */
+  grid-template-columns: repeat(3, minmax(0, 1fr));
 
+  /* Space between cards */
   gap: 22px;
 
 }
@@ -801,17 +611,23 @@ body {
 /* Individual skill card */
 .skill-card {
 
-  border: 2px solid #555;
-
-  padding: 30px 20px;
-
-  text-align: center;
-
+  /* Dark background */
   background: #101010;
 
+  /* White border */
+  border: 2px solid #444444;
+
+  /* Adds inside spacing */
+  padding: 28px 20px;
+
+  /* Centers content */
+  text-align: center;
+
+  /* Smooth hover */
   transition:
     transform 0.2s ease,
-    border 0.2s ease;
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
 
 }
 
@@ -819,106 +635,99 @@ body {
 /* Skill hover */
 .skill-card:hover {
 
+  /* Moves upward */
   transform: translateY(-8px) rotate(-1deg);
 
+  /* Red border */
   border-color: #ed1c2e;
+
+  /* Red shadow */
+  box-shadow: 8px 8px 0 #ed1c2e;
 
 }
 
 
-/* Fake skill icon */
+/* Skill icon image */
 .skill-icon {
 
-  width: 65px;
+  /* Controls image size */
+  width: 78px;
 
-  height: 65px;
+  /* Keeps proportions */
+  height: 78px;
+
+  /* Prevents stretching */
+  object-fit: contain;
+
+  /* Centers icon */
+  display: block;
 
   margin: 0 auto 18px;
 
-  display: flex;
+}
 
-  align-items: center;
 
-  justify-content: center;
+/* Skill name */
+.skill-card h3 {
 
-  background: #ed1c2e;
+  /* Adds spacing */
+  margin: 0 0 10px;
 
-  color: white;
-
-  font-weight: 900;
-
-  transform: rotate(-5deg);
+  /* Larger heading */
+  font-size: 1.3rem;
 
 }
 
 
-/* Skill text */
+/* Skill description */
 .skill-card p {
 
-  color: #bdbdbd;
+  /* Light gray */
+  color: #bcbcbc;
 
+  /* Better line spacing */
   line-height: 1.5;
 
+  /* Removes bottom margin */
+  margin-bottom: 0;
+
 }
+
 
 
 /* ========================================= */
-/* PROJECT SECTION                           */
+/* PROJECTS SECTION                          */
 /* ========================================= */
 
 
-/* Heading area */
-.projects-heading {
-
-  display: flex;
-
-  align-items: center;
-
-  justify-content: space-between;
-
-  gap: 20px;
-
-}
-
-
-/* Small view-all button */
-.small-button {
-
-  color: white;
-
-  text-decoration: none;
-
-  border: 2px solid white;
-
-  padding: 12px 18px;
-
-  font-weight: 900;
-
-}
-
-
-/* Project grid */
+/* Projects grid */
 .projects-grid {
 
+  /* Grid layout */
   display: grid;
 
-  grid-template-columns:
-    repeat(3, 1fr);
+  /* Three columns */
+  grid-template-columns: repeat(3, minmax(0, 1fr));
 
-  gap: 25px;
+  /* Space between cards */
+  gap: 24px;
 
 }
 
 
-/* Main project card */
+/* Project card */
 .project-card {
 
+  /* Dark background */
   background: #101010;
 
-  border: 2px solid #444;
+  /* Border */
+  border: 2px solid #444444;
 
+  /* Prevents preview from spilling out */
   overflow: hidden;
 
+  /* Smooth hover */
   transition:
     transform 0.2s ease,
     border-color 0.2s ease;
@@ -926,58 +735,151 @@ body {
 }
 
 
-/* Hover effect */
+/* Project hover */
 .project-card:hover {
 
+  /* Moves card up */
   transform: translateY(-8px);
 
+  /* Red border */
   border-color: #ed1c2e;
 
 }
 
 
-/* Fake project screenshot */
-.project-image {
+/* Project preview area */
+.project-preview {
 
-  height: 180px;
+  /* Gives the preview height */
+  height: 190px;
 
+  /* Centers the number */
   display: flex;
 
   align-items: center;
 
   justify-content: center;
 
+  /* Dark angular background */
   background:
     linear-gradient(
-      145deg,
-      #1d1d1d,
-      #070707
+      135deg,
+      #171717 0%,
+      #070707 55%,
+      #181818 100%
     );
 
-  color: #ed1c2e;
+  /* Adds line under image */
+  border-bottom: 2px solid #333333;
 
-  font-size: 1.4rem;
+  /* Decorative red diagonal shapes */
+  position: relative;
 
-  font-weight: 900;
-
-  border-bottom: 2px solid #444;
+  overflow: hidden;
 
 }
 
 
-/* Project information */
+/* Decorative red shape */
+.project-preview::before {
+
+  content: "";
+
+  position: absolute;
+
+  width: 65%;
+
+  height: 38px;
+
+  background: #ed1c2e;
+
+  transform: rotate(-22deg);
+
+  left: -20%;
+
+  top: 30px;
+
+  opacity: 0.8;
+
+}
+
+
+/* Second decorative shape */
+.project-preview::after {
+
+  content: "";
+
+  position: absolute;
+
+  width: 60%;
+
+  height: 28px;
+
+  background: #ed1c2e;
+
+  transform: rotate(-18deg);
+
+  right: -20%;
+
+  bottom: 25px;
+
+  opacity: 0.65;
+
+}
+
+
+/* Project number */
+.project-preview span {
+
+  /* Keeps number above decorations */
+  position: relative;
+
+  z-index: 2;
+
+  /* Large size */
+  font-size: 4rem;
+
+  /* Bold */
+  font-weight: 1000;
+
+  /* White text */
+  color: #ffffff;
+
+  /* Black shadow */
+  text-shadow:
+    6px 6px 0 #000000;
+
+}
+
+
+/* Project info area */
 .project-info {
 
-  padding: 20px;
+  /* Inside spacing */
+  padding: 22px;
 
 }
 
 
-/* Project description */
+/* Project title */
+.project-info h3 {
+
+  /* Removes top margin */
+  margin-top: 0;
+
+  /* Larger font */
+  font-size: 1.4rem;
+
+}
+
+
+/* Project paragraph */
 .project-info p {
 
-  color: #bbbbbb;
+  /* Gray text */
+  color: #bdbdbd;
 
+  /* Better readability */
   line-height: 1.6;
 
 }
@@ -986,13 +888,142 @@ body {
 /* Project link */
 .project-info a {
 
+  /* Red */
   color: #ed1c2e;
 
+  /* Removes underline */
   text-decoration: none;
 
+  /* Bold */
   font-weight: 900;
 
 }
+
+
+
+/* ========================================= */
+/* DEVELOPER GRAPHIC SECTION                 */
+/* ========================================= */
+
+
+/* Extra image section */
+.developer-section {
+
+  /* Two-column layout */
+  display: grid;
+
+  /* Graphic and text */
+  grid-template-columns: 1.1fr 0.9fr;
+
+  /* Centers content */
+  align-items: center;
+
+  /* Adds space */
+  gap: 55px;
+
+  /* Section spacing */
+  padding: 80px 7%;
+
+  /* Dark red background glow */
+  background:
+    linear-gradient(
+      120deg,
+      #050505,
+      #140507
+    );
+
+  /* Divider */
+  border-bottom: 2px solid #2b2b2b;
+
+}
+
+
+/* Graphic frame */
+.developer-image-box {
+
+  /* Red border */
+  border: 2px solid #ed1c2e;
+
+  /* White shadow */
+  box-shadow: 12px 12px 0 #ffffff;
+
+  /* Prevents overflow */
+  overflow: hidden;
+
+  /* Slight rotation */
+  transform: rotate(1deg);
+
+}
+
+
+/* Graphic image */
+.developer-image {
+
+  /* Responsive width */
+  width: 100%;
+
+  /* Keeps proportions */
+  height: auto;
+
+  /* Removes inline gap */
+  display: block;
+
+}
+
+
+/* Small red label */
+.eyebrow {
+
+  /* Red */
+  color: #ed1c2e;
+
+  /* Bold */
+  font-weight: 900;
+
+  /* Letter spacing */
+  letter-spacing: 3px;
+
+}
+
+
+/* Main text */
+.developer-text h2 {
+
+  /* Large */
+  font-size: clamp(2.6rem, 5vw, 4.7rem);
+
+  /* Tight */
+  line-height: 0.95;
+
+  /* Removes large default margin */
+  margin: 12px 0 24px;
+
+  /* Bold */
+  font-weight: 1000;
+
+}
+
+
+/* Red word */
+.developer-text h2 span {
+
+  /* Red */
+  color: #ed1c2e;
+
+}
+
+
+/* Paragraph */
+.developer-text > p:last-child {
+
+  /* Gray-white */
+  color: #cccccc;
+
+  /* Readable spacing */
+  line-height: 1.7;
+
+}
+
 
 
 /* ========================================= */
@@ -1000,63 +1031,114 @@ body {
 /* ========================================= */
 
 
-/* Description */
+/* Contact description */
 .contact-description {
 
-  max-width: 600px;
+  /* Limits width */
+  max-width: 700px;
 
+  /* Gray-white */
   color: #cccccc;
 
+  /* Better line spacing */
   line-height: 1.7;
 
 }
 
 
-/* Link container */
+/* Contact cards container */
 .contact-links {
 
+  /* Places cards beside each other */
   display: flex;
 
+  /* Allows wrapping */
   flex-wrap: wrap;
 
+  /* Space between */
   gap: 18px;
 
+  /* Space above */
   margin-top: 30px;
 
 }
 
 
-/* Contact buttons */
-.contact-links a {
+/* Individual contact card */
+.contact-card {
 
-  color: white;
+  /* Places icon and text side by side */
+  display: flex;
 
+  /* Centers vertically */
+  align-items: center;
+
+  /* Space between icon and text */
+  gap: 12px;
+
+  /* Removes underline */
   text-decoration: none;
 
-  border: 2px solid white;
+  /* White */
+  color: #ffffff;
 
-  padding: 14px 25px;
+  /* Border */
+  border: 2px solid #ffffff;
 
+  /* Click area */
+  padding: 13px 22px;
+
+  /* Bold */
   font-weight: 900;
 
+  /* Smooth hover */
   transition:
+    transform 0.2s ease,
     background 0.2s ease,
-    color 0.2s ease,
-    transform 0.2s ease;
+    color 0.2s ease;
 
 }
 
 
-/* Hover */
-.contact-links a:hover {
+/* Contact hover */
+.contact-card:hover {
 
+  /* Red background */
   background: #ed1c2e;
 
+  /* Red border */
   border-color: #ed1c2e;
 
+  /* Slight scale */
   transform: scale(1.06);
 
 }
+
+
+/* Contact icon image */
+.contact-icon {
+
+  /* Small icon */
+  width: 28px;
+
+  height: 28px;
+
+  object-fit: contain;
+
+}
+
+
+/* Text icons for Email and LinkedIn */
+.contact-symbol {
+
+  /* Larger */
+  font-size: 1.5rem;
+
+  /* Bold */
+  font-weight: 900;
+
+}
+
 
 
 /* ========================================= */
@@ -1067,19 +1149,26 @@ body {
 /* Footer */
 .site-footer {
 
+  /* Places text left/right */
   display: flex;
 
+  /* Pushes them apart */
   justify-content: space-between;
 
-  padding: 25px 7%;
+  /* Adds spacing */
+  padding: 24px 7%;
 
-  color: #777;
+  /* Dark background */
+  background: #000000;
 
+  /* Gray text */
+  color: #777777;
+
+  /* Smaller text */
   font-size: 0.8rem;
 
-  background: black;
-
 }
+
 
 
 /* ========================================= */
@@ -1087,58 +1176,56 @@ body {
 /* ========================================= */
 
 
-@media (max-width: 900px) {
+@media (max-width: 950px) {
 
 
-  /* Allows navigation to wrap */
+  /* Header stacks */
   .site-header {
 
     flex-direction: column;
 
+    gap: 10px;
+
   }
 
 
-  /* Smaller navigation gap */
+  /* Navigation wraps */
   .main-nav {
-
-    gap: 15px;
 
     flex-wrap: wrap;
 
     justify-content: center;
 
+    gap: 10px;
+
   }
 
 
-  /* Changes hero into one column */
+  /* Hero becomes one column */
   .hero-section {
 
     grid-template-columns: 1fr;
 
-    padding: 60px 6% 0;
-
   }
 
 
-  /* Gives hero content bottom spacing */
+  /* Centers hero text */
   .hero-content {
 
-    padding-bottom: 50px;
+    padding: 60px 7%;
 
   }
 
 
-  /* Makes visual full width */
-  .hero-visual {
+  /* Gives hero image a set height */
+  .hero-image-area {
 
-    min-height: 420px;
-
-    clip-path: none;
+    min-height: 430px;
 
   }
 
 
-  /* About becomes one column */
+  /* About stacks */
   .about-layout {
 
     grid-template-columns: 1fr;
@@ -1146,11 +1233,10 @@ body {
   }
 
 
-  /* Skills become two columns */
+  /* Skills become 2 columns */
   .skills-grid {
 
-    grid-template-columns:
-      repeat(2, 1fr);
+    grid-template-columns: repeat(2, minmax(0, 1fr));
 
   }
 
@@ -1163,7 +1249,16 @@ body {
   }
 
 
+  /* Developer section stacks */
+  .developer-section {
+
+    grid-template-columns: 1fr;
+
+  }
+
+
 }
+
 
 
 /* ========================================= */
@@ -1174,41 +1269,41 @@ body {
 @media (max-width: 600px) {
 
 
-  /* Smaller header padding */
-  .site-header {
+  /* Smaller logo */
+  .site-logo {
 
-    padding: 15px 4%;
+    width: 145px;
 
   }
 
 
-  /* Smaller navigation links */
+  /* Smaller nav text */
   .main-nav a {
 
-    font-size: 0.8rem;
+    font-size: 0.78rem;
 
     padding: 8px;
 
   }
 
 
-  /* Reduces hover size on phone */
+  /* Smaller hover effect */
   .main-nav a:hover {
 
-    transform: scale(1.08);
+    transform: scale(1.06);
 
   }
 
 
-  /* Smaller hero */
-  .hero-section {
+  /* Reduces hero image height */
+  .hero-image-area {
 
-    min-height: auto;
+    min-height: 300px;
 
   }
 
 
-  /* Smaller name */
+  /* Makes name slightly smaller */
   .hero-name {
 
     letter-spacing: -3px;
@@ -1216,7 +1311,7 @@ body {
   }
 
 
-  /* Stacks buttons */
+  /* Hero buttons stack */
   .hero-buttons {
 
     flex-direction: column;
@@ -1224,7 +1319,7 @@ body {
   }
 
 
-  /* Makes buttons easier to tap */
+  /* Buttons become full-width-like */
   .button {
 
     text-align: center;
@@ -1232,7 +1327,7 @@ body {
   }
 
 
-  /* Skills stack into one column */
+  /* Skills become one column */
   .skills-grid {
 
     grid-template-columns: 1fr;
@@ -1240,12 +1335,27 @@ body {
   }
 
 
-  /* Projects heading stacks */
-  .projects-heading {
+  /* Smaller spacing */
+  .page-section,
+  .developer-section {
 
-    align-items: flex-start;
+    padding: 60px 6%;
+
+  }
+
+
+  /* Contact cards stack */
+  .contact-links {
 
     flex-direction: column;
+
+  }
+
+
+  /* Makes cards easy to tap */
+  .contact-card {
+
+    justify-content: center;
 
   }
 
@@ -1255,7 +1365,7 @@ body {
 
     flex-direction: column;
 
-    gap: 5px;
+    gap: 4px;
 
   }
 
