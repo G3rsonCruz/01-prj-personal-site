@@ -1,32 +1,37 @@
 <!DOCTYPE html>
+
 <html lang="en">
 
 <head>
 
-  <!-- Lets the browser correctly read letters, numbers, and symbols -->
+  <!-- Allows the browser to correctly display characters -->
   <meta charset="UTF-8">
 
-  <!-- Makes the page resize correctly on phones and tablets -->
+  <!-- Makes the website responsive on phones and tablets -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- Text shown in the browser tab -->
+  <!-- Text that appears on the browser tab -->
   <title>Gerson | Web Development Portfolio</title>
 
-  <!-- Connects this HTML file to the CSS file -->
-  <link rel="stylesheet" href="style.css">
+  <!-- Connects this HTML page to the CSS file -->
+  <link rel="stylesheet" href="styles.css">
 
 </head>
 
 
 <body>
 
+
+  <!-- ========================================= -->
   <!-- HEADER / NAVIGATION                       -->
+  <!-- ========================================= -->
+
   <header class="site-header">
 
-    <!-- Logo image -->
+    <!-- Clicking the logo returns the user to the top -->
     <a href="#home" class="logo-link">
 
-      <!-- Loads the logo from the images folder -->
+      <!-- Personal logo -->
       <img
         src="images/logo.png"
         alt="Gerson logo"
@@ -36,19 +41,28 @@
     </a>
 
 
-    <!-- Main navigation -->
+    <!-- Main navigation menu -->
     <nav class="main-nav" aria-label="Main navigation">
 
-      <!-- Each link jumps to a section on the page -->
-      <a href="#home">HOME</a>
+      <a href="#home">
+        HOME
+      </a>
 
-      <a href="#about">ABOUT</a>
+      <a href="#about">
+        ABOUT
+      </a>
 
-      <a href="#skills">SKILLS</a>
+      <a href="#skills">
+        SKILLS
+      </a>
 
-      <a href="#projects">PROJECTS</a>
+      <a href="#projects">
+        PROJECTS
+      </a>
 
-      <a href="#contact">CONTACT</a>
+      <a href="#contact">
+        CONTACT
+      </a>
 
     </nav>
 
@@ -56,24 +70,30 @@
 
 
 
-  <!-- MAIN CONTENT                              -->
+  <!-- ========================================= -->
+  <!-- MAIN WEBSITE CONTENT                      -->
+  <!-- ========================================= -->
+
   <main>
 
-    <!-- HERO / HOME SECTION                     -->
+
+    <!-- ======================================= -->
+    <!-- HOME / HERO SECTION                     -->
+    <!-- ======================================= -->
 
     <section id="home" class="hero-section">
 
 
-      <!-- Left side of the hero -->
+      <!-- LEFT SIDE -->
       <div class="hero-content">
 
-        <!-- Small introduction text -->
+        <!-- Small introduction -->
         <p class="hero-small-text">
           Hello, I'm
         </p>
 
 
-        <!-- Main first name -->
+        <!-- First name -->
         <h1 class="hero-name">
           GERSON
         </h1>
@@ -85,7 +105,7 @@
         </div>
 
 
-        <!-- Short title -->
+        <!-- Career title -->
         <p class="hero-title">
           Aspiring Developer
         </p>
@@ -93,23 +113,31 @@
 
         <!-- Short introduction -->
         <p class="hero-description">
+
           I'm a Computer Science student building clean,
           responsive websites and learning how to turn ideas
           into real projects through code.
+
         </p>
 
 
         <!-- Hero buttons -->
         <div class="hero-buttons">
 
-          <!-- Jumps to Projects -->
-          <a href="#projects" class="button red-button">
+          <!-- Takes user to Projects -->
+          <a
+            href="#projects"
+            class="button red-button"
+          >
             VIEW PROJECTS
           </a>
 
 
-          <!-- Jumps to Contact -->
-          <a href="#contact" class="button outline-button">
+          <!-- Takes user to Contact -->
+          <a
+            href="#contact"
+            class="button outline-button"
+          >
             CONTACT ME
           </a>
 
@@ -119,13 +147,13 @@
 
 
 
-      <!-- Right side of the hero -->
+      <!-- RIGHT SIDE -->
       <div class="hero-image-area">
 
-        <!-- Main hero background artwork -->
+        <!-- Coding workspace image -->
         <img
           src="images/hero-bg.png"
-          alt="Stylized black and red subway scene"
+          alt="Dark coding workspace with laptop"
           class="hero-image"
         >
 
@@ -135,7 +163,10 @@
     </section>
 
 
-    <!-- ABOUT SECTION                           -->
+
+    <!-- ======================================= -->
+    <!-- ABOUT ME SECTION                        -->
+    <!-- ======================================= -->
 
     <section id="about" class="page-section about-section">
 
@@ -147,45 +178,50 @@
           ABOUT <span>ME</span>
         </h2>
 
-        <!-- Red underline is created using CSS -->
+        <!-- Decorative red underline -->
         <div class="heading-underline"></div>
 
       </div>
 
 
 
-      <!-- About section content -->
       <div class="about-layout">
 
 
-        <!-- About text -->
+        <!-- About information -->
         <div class="about-text">
 
           <p>
+
             I'm a Computer Science student who enjoys
             programming, web development, and building
             projects that help me improve my skills.
+
           </p>
 
 
           <p>
+
             This portfolio will continue to grow as I complete
             more projects in my web development course and
             experiment with new technologies.
+
           </p>
 
 
           <p>
+
             I especially enjoy bold visual design, responsive
             layouts, and creating websites that feel more
             interactive than a basic static page.
+
           </p>
 
         </div>
 
 
 
-        <!-- About image -->
+        <!-- About Me artwork -->
         <div class="about-image-box">
 
           <img
@@ -211,7 +247,6 @@
     <section id="skills" class="page-section skills-section">
 
 
-      <!-- Section heading -->
       <div class="section-heading">
 
         <h2>
@@ -224,20 +259,22 @@
 
 
 
-      <!-- Skills cards -->
+      <!-- Grid containing all skill cards -->
       <div class="skills-grid">
 
 
-        <!-- HTML CARD -->
+        <!-- HTML -->
         <article class="skill-card">
 
           <img
-            src="images/html-icon.png"
+            src="images/html.png"
             alt="HTML logo"
             class="skill-icon"
           >
 
-          <h3>HTML</h3>
+          <h3>
+            HTML
+          </h3>
 
           <p>
             Building the structure and content of webpages.
@@ -247,7 +284,7 @@
 
 
 
-        <!-- CSS CARD -->
+        <!-- CSS -->
         <article class="skill-card">
 
           <img
@@ -256,7 +293,9 @@
             class="skill-icon"
           >
 
-          <h3>CSS</h3>
+          <h3>
+            CSS
+          </h3>
 
           <p>
             Styling layouts, colors, spacing, and responsive designs.
@@ -266,7 +305,7 @@
 
 
 
-        <!-- JAVA CARD -->
+        <!-- JAVA -->
         <article class="skill-card">
 
           <img
@@ -275,7 +314,9 @@
             class="skill-icon"
           >
 
-          <h3>Java</h3>
+          <h3>
+            Java
+          </h3>
 
           <p>
             Object-oriented programming, algorithms, and data structures.
@@ -285,16 +326,18 @@
 
 
 
-        <!-- PYTHON CARD -->
+        <!-- PYTHON -->
         <article class="skill-card">
 
           <img
-            src="images/python-icon.png"
+            src="images/python.png"
             alt="Python logo"
             class="skill-icon"
           >
 
-          <h3>Python</h3>
+          <h3>
+            Python
+          </h3>
 
           <p>
             Programming, automation, and personal development projects.
@@ -304,7 +347,7 @@
 
 
 
-        <!-- GIT CARD -->
+        <!-- GIT -->
         <article class="skill-card">
 
           <img
@@ -313,7 +356,9 @@
             class="skill-icon"
           >
 
-          <h3>Git</h3>
+          <h3>
+            Git
+          </h3>
 
           <p>
             Tracking changes and managing project versions.
@@ -323,7 +368,7 @@
 
 
 
-        <!-- GITHUB CARD -->
+        <!-- GITHUB -->
         <article class="skill-card">
 
           <img
@@ -332,7 +377,9 @@
             class="skill-icon"
           >
 
-          <h3>GitHub</h3>
+          <h3>
+            GitHub
+          </h3>
 
           <p>
             Storing projects and sharing code online.
@@ -355,7 +402,7 @@
     <section id="projects" class="page-section projects-section">
 
 
-      <!-- Section heading -->
+      <!-- Projects heading -->
       <div class="section-heading">
 
         <h2>
@@ -368,96 +415,250 @@
 
 
 
-      <!-- Projects grid -->
+      <!-- Project cards -->
       <div class="projects-grid">
 
 
-        <!-- PROJECT 1 -->
+        <!-- =================================== -->
+        <!-- PROJECT 01 - CORTANA                -->
+        <!-- =================================== -->
+
         <article class="project-card">
 
-          <!-- Temporary visual area -->
-          <div class="project-preview project-preview-one">
 
-            <span>01</span>
-
-          </div>
+          <!-- Actual screenshot of Cortana -->
+          <img
+            src="images/cortana-project.png"
+            alt="Screenshot of Cortana personal AI assistant"
+            class="project-image"
+          >
 
 
           <div class="project-info">
 
+
+            <!-- Project number -->
+            <span class="project-number">
+              01
+            </span>
+
+
+            <!-- Project title -->
             <h3>
-              Project One
+              Cortana
             </h3>
 
+
+            <!-- Project description -->
             <p>
-              Your first web development course project will go here.
+
+              A personal local AI assistant built to run directly
+              on my computer. Cortana includes chat, programming
+              assistance, math help, memory, voice features,
+              and local AI models.
+
             </p>
 
-            <a href="#">
-              VIEW PROJECT →
-            </a>
+
+            <!-- Technologies -->
+            <div class="project-tech">
+
+              <span>
+                PYTHON
+              </span>
+
+              <span>
+                OLLAMA
+              </span>
+
+              <span>
+                LOCAL AI
+              </span>
+
+            </div>
+
+
+            <!-- Since Cortana is currently local, there is no live website -->
+            <div class="project-links">
+
+              <span class="project-status">
+                LOCAL PROJECT
+              </span>
+
+            </div>
+
 
           </div>
+
 
         </article>
 
 
 
-        <!-- PROJECT 2 -->
+        <!-- =================================== -->
+        <!-- PROJECT 02 - PET FOSTERING          -->
+        <!-- =================================== -->
+
         <article class="project-card">
 
-          <div class="project-preview project-preview-two">
 
-            <span>02</span>
+          <!--
+            This is currently a placeholder.
+
+            Later, when you take a screenshot of your
+            pet fostering website, we can replace this
+            with an actual image.
+          -->
+
+          <div class="project-placeholder pet-project">
+
+            <span>
+              PET
+            </span>
+
+            <strong>
+              FOSTERING
+            </strong>
+
+            <small>
+              WEBSITE
+            </small>
 
           </div>
+
 
 
           <div class="project-info">
 
+
+            <span class="project-number">
+              02
+            </span>
+
+
             <h3>
-              Project Two
+              Pet Fostering Website
             </h3>
 
+
             <p>
-              Add your second class project once it is completed.
+
+              A front-end pet fostering website created as
+              a web development project. The project focuses
+              on webpage structure, styling, and presentation.
+
             </p>
 
-            <a href="#">
-              VIEW PROJECT →
-            </a>
+
+            <!-- Technologies used -->
+            <div class="project-tech">
+
+              <span>
+                HTML
+              </span>
+
+              <span>
+                CSS
+              </span>
+
+            </div>
+
+
+            <!-- Project link -->
+            <div class="project-links">
+
+
+              <!--
+                For now this opens your GitHub profile.
+
+                Later we can replace this with the exact
+                pet fostering repository URL.
+              -->
+
+              <a
+                href="https://github.com/G3rsonCruz"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                VIEW GITHUB ↗
+              </a>
+
+
+            </div>
+
 
           </div>
+
 
         </article>
 
 
 
-        <!-- PROJECT 3 -->
-        <article class="project-card">
+        <!-- =================================== -->
+        <!-- PROJECT 03 - COMING SOON            -->
+        <!-- =================================== -->
 
-          <div class="project-preview project-preview-three">
+        <article class="project-card coming-soon-card">
 
-            <span>03</span>
+
+          <!-- Coming Soon graphic created entirely with CSS -->
+          <div class="project-placeholder coming-soon-preview">
+
+            <span>
+              03
+            </span>
+
+            <strong>
+              COMING SOON
+            </strong>
 
           </div>
+
 
 
           <div class="project-info">
 
+
+            <span class="project-number">
+              03
+            </span>
+
+
             <h3>
-              Project Three
+              Next Project
             </h3>
 
+
             <p>
-              Use this card for another assignment or personal project.
+
+              More projects will be added here as I continue
+              learning and building throughout my web
+              development course.
+
             </p>
 
-            <a href="#">
-              VIEW PROJECT →
-            </a>
+
+            <div class="project-tech">
+
+              <span>
+                IN PROGRESS
+              </span>
+
+            </div>
+
+
+            <div class="project-links">
+
+              <!-- Not clickable because the project does not exist yet -->
+              <span class="disabled-project-link">
+                COMING SOON
+              </span>
+
+            </div>
+
 
           </div>
+
 
         </article>
 
@@ -470,13 +671,13 @@
 
 
     <!-- ======================================= -->
-    <!-- DEVELOPER GRAPHIC SECTION                -->
+    <!-- DEVELOPER / LEARNING SECTION             -->
     <!-- ======================================= -->
 
     <section class="developer-section">
 
 
-      <!-- Extra visual that helps break up the page -->
+      <!-- Developer graphic -->
       <div class="developer-image-box">
 
         <img
@@ -489,8 +690,9 @@
 
 
 
-      <!-- Text beside the graphic -->
+      <!-- Text beside image -->
       <div class="developer-text">
+
 
         <p class="eyebrow">
           ALWAYS LEARNING
@@ -498,17 +700,26 @@
 
 
         <h2>
+
           BUILD.
-          <span>LEARN.</span>
+
+          <span>
+            LEARN.
+          </span>
+
           REPEAT.
+
         </h2>
 
 
         <p>
-          This portfolio is not just a place to show finished work.
-          It also represents the progress I make as I continue
-          learning software development.
+
+          This portfolio is not just a place to show finished
+          work. It also represents the progress I make as I
+          continue learning software development.
+
         </p>
+
 
       </div>
 
@@ -524,7 +735,6 @@
     <section id="contact" class="page-section contact-section">
 
 
-      <!-- Heading -->
       <div class="section-heading">
 
         <h2>
@@ -537,20 +747,30 @@
 
 
 
-      <!-- Contact text -->
       <p class="contact-description">
-        Want to connect, see more of my work, or ask about a project?
+
+        Want to connect, see more of my work,
+        or ask about one of my projects?
         You can reach me using the links below.
+
       </p>
 
 
 
-      <!-- Contact links -->
+      <!-- Contact buttons -->
       <div class="contact-links">
 
 
-        <!-- GitHub -->
-        <a href="#" class="contact-card">
+        <!-- =================================== -->
+        <!-- GITHUB                              -->
+        <!-- =================================== -->
+
+        <a
+          href="https://github.com/G3rsonCruz"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="contact-card"
+        >
 
           <img
             src="images/github-icon.png"
@@ -566,8 +786,14 @@
 
 
 
-        <!-- Email -->
-        <a href="mailto:youremail@example.com" class="contact-card">
+        <!-- =================================== -->
+        <!-- EMAIL                               -->
+        <!-- =================================== -->
+
+        <a
+          href="mailto:cruzcarcamogerson@gmail.com"
+          class="contact-card"
+        >
 
           <span class="contact-symbol">
             ✉
@@ -575,21 +801,6 @@
 
           <span>
             EMAIL
-          </span>
-
-        </a>
-
-
-
-        <!-- LinkedIn placeholder -->
-        <a href="#" class="contact-card">
-
-          <span class="contact-symbol">
-            in
-          </span>
-
-          <span>
-            LINKEDIN
           </span>
 
         </a>
@@ -611,13 +822,16 @@
 
   <footer class="site-footer">
 
+
     <p>
       © 2026 Gerson Cruz-Carcamo
     </p>
 
+
     <p>
       Built with HTML + CSS
     </p>
+
 
   </footer>
 
